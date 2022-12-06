@@ -2,11 +2,13 @@
 
 .fe02-wpb__col-container {
   display: flex;
-  padding: 0 -15px;
+  margin:0;
+  justify-content: center;
   font-family: 'Roboto', sans-serif;
 
     .fe02-wpb__col-context {
       box-sizing: border-box;
+      max-width: 380px;
       margin-bottom: 10px;
       cursor: help;
 
@@ -17,6 +19,7 @@
         bottom: 0;
 
         .fe02-wpb__col-context__inner__context {
+          padding: 0 15px;
           .fe02-wpb__col-context__inner__context__block {
             position: relative;
             overflow: hidden;

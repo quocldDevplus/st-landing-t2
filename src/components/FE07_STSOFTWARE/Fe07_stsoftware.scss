@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap');.green {
+  border: 1px solid green
+}
+
+.red {
+  border: 1px solid red
+}
+
+.fe07-container {
+  background-color: rgba(0,0,0,0.04);
+  margin:0;
+  padding: 0 0 40px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .fe07-container__wpb {
+    max-width: 1140px;
+    height: 100%;
+    padding:0;
+
+    .fe07-container__wpb__inner {
+      padding: 0;
+      margin:0;
+      width: 100%;
+      .fe07-blank{
+        height:30px;
+      }
+      .fe07-context__wpb--block {
+        margin:0;
+        padding: 45px 0;
+        display: flex;
+
+        .fe07-context__wpb--block--col {
+          .fe07-context__wpb--block--item {
+            max-height:1005px;
+            padding:0 0 30px 0;
+
+            .fe07-context__wpb--service {
+              font-family: 'Roboto', sans-serif;
+              display: flex;
+              padding:0;
+              justify-content: center;
+              color: #7A7A7A;
+              text-align: left;
+
+              .fe07-context__wpb--block--icon {
+                font-size: 40px;
+                margin: 5px 0 0 0 ;
+                min-width: 80px;
+                padding: 0 20px 0 0;
+
+                svg {
+                  vertical-align: top;
+                }
+              }
+
+              .fe07-context__wpb--block--content {
+                max-width: 300px;
+                min-height: 230px;
+
+                h3 {
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 28px;
+                }
+
+                p {
+                  font-size: 16px;
+                  line-height: 22px;
+                  font-weight: 300;
+                  color: #636363 !important;
+                  margin: 0 0 10px 0;
+                }
+                a {
+                  color: #9191dc;
+                  font-size: 16px;
+                  line-height: 16px;
+                  font-weight: 400;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .fe07-wpb__wrapper {
+        width: 100%;
+        padding:0;
+
+        .fe07-textcenter {
+          font-family: 'Roboto', sans-serif;
+          padding-top: 55px;
+          max-height:35vh;
+          text-align: center;
+
+          h2{
+            color: #7A7A7A;
+            text-align:center;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 500;
+          }
+
+          h3 {
+            color: #7A7A7A;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 300;
+          }
+        }
+
+        .fe07-emptyspace {
+          height: 10px;
+        }
+      }
+    }
+  }
+}
