@@ -4,7 +4,8 @@ import {BsFillFlagFill} from "react-icons/bs";
 import {FaUsers} from "react-icons/fa";
 import FE02TypicalChild from "../FE02Typical/FE02TypicalChild";
 // import {getAllDataFE02, getAllDataFE07Div1} from "~/service/Apiservice";
-import {Row,Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
+import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
 
 const Fe07_stsoftware = () => {
     const [listFe07, setListFe07] = useState([
@@ -102,52 +103,53 @@ const Fe07_stsoftware = () => {
     return (
         <>
             <Row className="fe07-container">
+                <Fe07Header/>
                 <Col className="fe07-container__wpb">
                     <Row className="fe07-container__wpb__inner">
                         <Row className="fe07-blank">
                         </Row>
-                            <Row className="fe07-context__wpb--block">
-                                {listContextFe07D1 && listContextFe07D1.map((item, index) => {
-                                    return (
-                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
-                                            <Row className="fe07-context__wpb--block--item">
-                                                <Col className="fe07-context__wpb--service">
-                                                    <Row className="fe07-context__wpb--block--icon">
-                                                       {item.icon}
-                                                    </Row>
-                                                    <Col className="fe07-context__wpb--block--content">
-                                                        <h3>{item.title}</h3>
-                                                        <p>{item.content}</p>
-                                                        <a href="#">{item.link}</a>
-                                                    </Col>
+                        <Row className="fe07-context__wpb--block">
+                            {listContextFe07D1 && listContextFe07D1.map((item, index) => {
+                                return (
+                                    <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                        <Row className="fe07-context__wpb--block--item">
+                                            <Col className="fe07-context__wpb--service">
+                                                <Row className="fe07-context__wpb--block--icon">
+                                                    {item.icon}
+                                                </Row>
+                                                <Col className="fe07-context__wpb--block--content">
+                                                    <h3>{item.title}</h3>
+                                                    <p>{item.content}</p>
+                                                    <a href="#">{item.link}</a>
                                                 </Col>
-                                            </Row>
-                                        </Col>
-                                    )
-                                })
-                                }
-                            </Row>
-                            <Row className="fe07-context__wpb--block">
-                                {listContextFe07D2 && listContextFe07D2.map((item, index) => {
-                                    return (
-                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
-                                            <Row className="fe07-context__wpb--block--item">
-                                                <Col className="fe07-context__wpb--service">
-                                                    <Row className="fe07-context__wpb--block--icon">
-                                                        {item.icon}
-                                                    </Row>
-                                                    <Col className="fe07-context__wpb--block--content">
-                                                        <h3>{item.title}</h3>
-                                                        <p>{item.content}</p>
-                                                        <a href="#">{item.link}</a>
-                                                    </Col>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                )
+                            })
+                            }
+                        </Row>
+                        <Row className="fe07-context__wpb--block">
+                            {listContextFe07D2 && listContextFe07D2.map((item, index) => {
+                                return (
+                                    <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                        <Row className="fe07-context__wpb--block--item">
+                                            <Col className="fe07-context__wpb--service">
+                                                <Row className="fe07-context__wpb--block--icon">
+                                                    {item.icon}
+                                                </Row>
+                                                <Col className="fe07-context__wpb--block--content">
+                                                    <h3>{item.title}</h3>
+                                                    <p>{item.content}</p>
+                                                    <a href="#">{item.link}</a>
                                                 </Col>
-                                            </Row>
-                                        </Col>
-                                    )
-                                })
-                                }
-                            </Row>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                )
+                            })
+                            }
+                        </Row>
                         {/*/////////////////////////////*/}
                         <Col className="fe07-wpb__wrapper">
                             <Col className="fe07-textcenter">
@@ -165,7 +167,7 @@ const Fe07_stsoftware = () => {
                                 SetListContainerFe02={setListFe07}
                             />
                         </Col>
-                        <Row className="fe07-emptyspace" style={{height:"120px"}}>
+                        <Row className="fe07-emptyspace" style={{height: "120px"}}>
                         </Row>
                     </Row>
                 </Col>

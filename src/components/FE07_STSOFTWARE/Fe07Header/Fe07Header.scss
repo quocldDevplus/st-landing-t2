@@ -1,0 +1,71 @@
+.fe07-header-wrap {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  .fe07-header-media {
+    padding: 0;
+    margin: 0;
+    .fe07-banner-parallax {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 400px;
+      &:before{
+        height:400px;
+      }
+      .fe07-banner-bg-wrap {
+        z-index: 0;
+        visibility: inherit;
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+        backface-visibility: hidden;
+        padding: 0;
+        margin: 0;
+        .fe07-banner-inner {
+          margin: 0;
+          padding: 0;
+          max-width: 100%;
+          height:100%;
+          visibility: visible;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          background-image: url(https://stunited.vn/wp-content/uploads/2019/09/team-.jpg);
+          &:before{
+            content: "";
+            position: absolute;
+            height:100%;
+            width: 100%;
+            background-color: #000000;
+            opacity: 0.4;
+            z-index: 2;
+          }
+        }
+
+      }
+
+    }
+
+    .fe07-banner-caption {
+      position:absolute;
+      color:white;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%,-50%);
+      h1 {
+        font-size: 43px;
+        line-height: 43px;
+        font-weight: 500;
+        margin: 0 0 10px;
+      }
+      h2 {
+
+      }
+    }
+
+  }
+
+}
