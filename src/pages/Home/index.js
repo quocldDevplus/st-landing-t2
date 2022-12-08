@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 function Home() {
-    return <div className={cx('home-content')}>Home</div>;
+    return <div className={cx('home-content')}></div>;
 }
 
 export default Home;
