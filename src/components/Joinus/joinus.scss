@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.fe11-header-wrap {
+
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  .fe11-header-media {
+    padding: 0;
+    margin: 0;
+
+    .fe11-banner-parallax {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 400px;
+
+      &:before {
+        height: 400px;
+      }
+
+      .fe11-banner-bg-wrap {
+        z-index: 0;
+        visibility: inherit;
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+        backface-visibility: hidden;
+        padding: 0;
+        margin: 0;
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: #000000;
+          opacity: 0.4;
+          z-index: 3;
+        }
+
+
+        .fe11-banner-inner {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          visibility: inherit;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          background-image: url(https://stunited.vn/wp-content/uploads/2019/09/join.jpg);
+
+        }
+      }
+
+    }
+
+    .fe11-banner-caption {
+      position: absolute;
+      color: white;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 991px) {
+        top: 50%;
+      }
+
+      h1 {
+        font-size: 43px;
+        line-height: 43px;
+        font-weight: 500;
+        margin: 0 0 10px;
+        color: #ffffff;
+        font-family: Roboto;
+        text-transform: inherit;
+        
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          font-size: 30px;
+          line-height: 36px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 24px;
+          line-height: 28px;
+          margin: 0 0 5px;
+        }
+
+        @media (max-width: 481px) {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 0 0 5px;
+        }
+      }
+
+      h2 {
+        color: #ffffff;
+        font-family: Roboto;
+        font-weight: 500;
+        text-transform: inherit;
+        
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 0 20px;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.fe11-container {
+  background: #3333330f;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:before {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+
+
+  .fe11-cover--container {
+    margin-left: 25px;
+    margin-right: -15px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+
+
+
+
+    &::before {
+      content: " ";
+      display: table;
+    }
+  }
+
+  .fe11-children--container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+
+
+
+
+    .fe-11children--cover {
+      margin-left: -15px;
+      margin-right: -15px;
+
+      &::before {
+        content: " ";
+        display: table;
+      }
+
+      .fe11-children--cover__col {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+
+
+
+        .fe11-vc_column-innder {
+          box-sizing: border-box;
+          padding-left: 15px;
+          padding-right: 15px;
+          width: 100%;
+
+          &::before {
+            content: " ";
+            display: table;
+          }
+
+          &::after {
+            clear: both;
+            content: " ";
+            display: table;
+          }
+        }
+      }
+    }
+
+    
+
+
+
+
+  }
+
+}
+
+.fe11-wpb-wrapper {
+  .fe11-title {
+    padding: 55px 0 0 0 !important;
+    text-align: center;
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0 0 10px 0;
+      font-weight: 500;
+      text-transform: inherit;
+      
+    }
+
+    .fe11-sub-heading {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      text-transform: inherit;
+      
+      font-family: Roboto;
+      margin: 0 0 20px 0;
+      color: inherit;
+    }
+  }
+}
+.fe11-service--container {
+  padding: 40px 0 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+
+
+  .fe11-no-margin {
+    margin: 0 !important;
+    max-width: 1140px;
+
+    &::before {
+      content: " ";
+      display: table;
+    }
+
+
+
+
+    .fe11-service--block {
+      z-index: 2;
+      padding: 0 30px 30px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 0 3px rgb(0 0 0 / 15%);
+      transition: .2s;
+      position: relative;
+
+
+      .fe11-service--icon {
+        font-size: 60px;
+        min-width: 80px;
+        padding: 80px 0 70px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          height: 150px;
+          width: 150px;
+          vertical-align: middle;
+          padding: 0;
+          text-align: center;
+        }
+
+      }
+
+      .fe11-service--content {
+        text-align: center;
+
+        .fe11-service--title {
+          font-size: 20px;
+          line-height: 28px;
+          font-family: Roboto;
+          font-weight: 500;
+          text-transform: inherit;
+          
+          margin: 0 0 8px 0;
+          color: inherit;
+          color: #000000;
+        }
+
+        .fe11-service--desc {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 300;
+          margin: 0 0 10px 0;
+          color: #636363;
+          text-align: center;
+        }
+
+        .fe11-service--link {
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: 400;
+          color: #00AEEF;
+          margin: 0px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .fe11-service--block:hover {
+      z-index: 100;
+      box-shadow: 0 70px 70px rgb(0 0 0 / 20%);
+
+      transform: scale(1.01);
+
+      transform: translate(0, -10px);
+    }
+  }
+
+} 
