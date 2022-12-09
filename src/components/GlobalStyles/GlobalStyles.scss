@@ -26,7 +26,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
-    text-rendering: optimizeSpeed;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 button,
@@ -37,6 +38,9 @@ input,
 }
 
 a[href] {
-    color: var(--text-color);
     text-decoration: none;
+}
+
+.container {
+    padding: 0;
 }
