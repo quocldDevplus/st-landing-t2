@@ -1,30 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/layout';
-function App() {
+import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
+
+function stSoftWare() {
     return (
-        <Router>
-            <div className="App">
-                <Routes>
-                    {publicRoutes.map((route, index) => {
-                        const Page = route.component;
-                        let Layout = DefaultLayout;
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
-                                }
-                            />
-                        );
-                    })}
-                </Routes>
-            </div>
-        </Router>
+       <Fe07_stsoftware/>
     );
 }
 
-export default App;
+export default stSoftWare;

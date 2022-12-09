@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import {BsFillFlagFill} from "react-icons/bs";
 import {FaUsers} from "react-icons/fa";
 import FE02TypicalChild from "../FE02Typical/FE02TypicalChild";
-// import {getAllDataFE02, getAllDataFE07Div1} from "~/service/Apiservice";
 import {Row, Col} from 'react-bootstrap'
 import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
 
