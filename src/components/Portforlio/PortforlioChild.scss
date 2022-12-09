@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap');
+.Portforlio-wpb__col-container {
+  display: flex;
+  padding: 0 -15px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 60px;
+
+  .Portforlio-wpb__col-context {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: help;
+
+    .Portforlio-wpb__col-context__inner {
+      overflow: auto;
+      max-height: 100%;
+      padding:20px 0;
+      bottom: 0;
+      .Portforlio-wpb__col-context__inner__context {
+        .Portforlio-wpb__col-context__inner__context__block {
+          position: relative;
+          overflow: hidden;
+          max-height: 100vh;
+          box-shadow: 0 0 5px #888888;
+
+          a {
+            height: 100%;
+            background-color: transparent;
+            box-sizing: border-box;
+          }
+
+          .Portforlio-block {
+            margin-bottom: 10px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .Portforlio-wpb__caption--after {
+            opacity: 0;
+            position: absolute;
+            transform: translateX(100%);
+            background-color: rgba(255, 255, 255, 0.9);
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1s ease 0s;
+
+            .Portforlio-wpb__caption__inner {
+              max-height: 100%;
+              padding: 15px 23px;
+              text-align: center;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              .Portforlio-wpb__caption__team--name {
+                height: 20px;
+                font-weight: 700;
+                margin: 0 0 8px;
+
+                a {
+                  color: black;
+                  font-size: 16px;
+                  text-decoration: none;
+                }
+              }
+              .Portforlio-wpb__caption__team-designation {
+                color: black;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 600;
+                margin-bottom: 12px;
+              }
+              .Portforlio-wpb__caption__team-descriptions{
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 300;
+                margin: 15px 0 20px;
+              }
+              .Portforlio-wpb__caption__team-social {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                .btn-facebook {
+                  color: rgba(0,0,0,.7);
+                  text-decoration: none;
+                  margin-right: 3px;
+                }
+
+                .btn-FaLinkedin {
+                  color: rgba(0,0,0,.7);
+                  text-decoration: none;
+                }
+              }
+
+            }
+          }
+
+          .Portforlio-wpb__caption--before {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 -125px 103px -60px #1a1a1a;
+
+            .Portforlio-wpb__caption__inner {
+              position: absolute;
+              width: 100%;
+              max-height: 100%;
+              text-align: center;
+              padding: 0 15px;
+              bottom: 0;
+
+              .Portforlio-wpb__caption__team--name {
+                justify-content: center;
+                display: flex;
+                max-height: 55px;
+                padding:0;
+                line-height: 20px;
+                font-weight: 700;
+                margin: 0 0 8px;
+
+                a {
+                  color: #ffffff;
+                  font-size: 16px;
+                  font-weight: 500;
+                  text-align: center;
+                  text-decoration: none;
+                }
+              }
+
+              .Portforlio-wpb__caption__team-designation {
+                display: flex;
+                justify-content: center;
+                color: #ffffff;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                margin: 0 0 12px;
+              }
+
+              .Portforlio-wpb__caption__team-social {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+
+                .btn-facebook {
+                  color: #ffffff;
+                  text-decoration: none;
+                  padding-right: 2px;
+                }
+
+                .btn-FaLinkedin {
+                  color: #ffffff;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .Portforlio-wpb__caption--before {
+              transform: translateX(-100%);
+              overflow:hidden;
+              transition: all 1s ease 0s;
+            }
+            .Portforlio-wpb__caption--after {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
