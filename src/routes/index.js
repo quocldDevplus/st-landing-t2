@@ -2,9 +2,10 @@
 import Home from '~/pages/Home';
 import WhoWeAre from '~/pages/WhoWeAre';
 import Fortfolio from '~/pages/Portfolio';
+import Stsoftware from "~/pages/Portfolio";
 const publicRoutes = [
     { path: '/', component: Home },
-    { path: '/st-software', component: WhoWeAre },
+    { path: '/st-software', component: Stsoftware },
     { path: '/st-digital', component: WhoWeAre },
     { path: '/st-incubation', component: WhoWeAre },
     { path: '/who-we-are', component: WhoWeAre },

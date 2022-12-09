@@ -1,3 +1,6 @@
+
+import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
+
 function Fortfolio() {
     return (
         <div className="container">
@@ -6,4 +9,4 @@ function Fortfolio() {
     );
 }
 
-export default Fortfolio;
+export default Stsoftware;
