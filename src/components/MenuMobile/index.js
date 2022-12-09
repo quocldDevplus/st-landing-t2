@@ -61,7 +61,9 @@ function MenuMobile() {
                                                 )}
                                             </>
                                         ) : (
-                                            <NavLink className="item-content">{item.content}</NavLink>
+                                            <NavLink to={item.to} className="item-content">
+                                                {item.content}
+                                            </NavLink>
                                         )}
                                     </li>{' '}
                                     {subMobileToggle ? (
@@ -69,7 +71,7 @@ function MenuMobile() {
                                             {item.childrens ? (
                                                 item.childrens.map((itemChildren) => (
                                                     <li className="sub-item-mobile" key={itemChildren.id}>
-                                                        <NavLink className="item-content-mobile">
+                                                        <NavLink to={item.to} className="item-content-mobile">
                                                             {itemChildren.content}
                                                         </NavLink>
                                                     </li>

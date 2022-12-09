@@ -24,13 +24,15 @@ function Header() {
                                     {item.childrens ? (
                                         <NavLink className={cx('had-children', 'item-content')}>{item.content}</NavLink>
                                     ) : (
-                                        <NavLink className={cx('item-content')}>{item.content}</NavLink>
+                                        <NavLink to={item.to} className={cx('item-content')}>
+                                            {item.content}
+                                        </NavLink>
                                     )}
                                     <ul className={cx('sub-menu')}>
                                         {item.childrens ? (
                                             item.childrens.map((itemChildren) => (
                                                 <li className={cx('sub-item')} key={itemChildren.id}>
-                                                    <NavLink className={cx('item-content')}>
+                                                    <NavLink to={itemChildren.to} className={cx('item-content')}>
                                                         {itemChildren.content}
                                                     </NavLink>
                                                 </li>
