@@ -1,0 +1,75 @@
+.houzez-header {
+    width: 100%;
+    height: 106px;
+    display: flex;
+}
+.logo-box {
+    width: 150px;
+    display: flex;
+
+    .logo-img {
+        img {
+            position: relative;
+            width: 100%;
+            top: -4px;
+        }
+    }
+}
+.nav-menu {
+    margin-left: 5%;
+}
+.main-menu {
+    display: flex;
+}
+.nav-item {
+    list-style: none;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 90px;
+}
+.had-children {
+    &:after {
+        font-family: FontAwesome;
+        margin: 0 0 0 10px;
+        content: '\f0d7';
+    }
+}
+.had-children {
+    a:hover .sub-menu {
+        background-color: red;
+        display: block;
+    }
+}
+.item-content {
+    color: white;
+    &:hover {
+        color: #00aeef;
+    }
+    transition: 0.3s;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 250px;
+    box-shadow: 0 4px 5px rgb(0 0 0 / 15%);
+    padding: 0;
+}
+.sub-item {
+    list-style: none;
+    line-height: 18px;
+    text-align: left;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 15px;
+    height: 48px;
+}
+.sub-item-content {
+    color: #2e3e49;
+    &:hover {
+        color: #00aeef;
+    }
+    transition: 0.3s;
+}

@@ -6,6 +6,7 @@ import FE02Typical from "~/components/FE02Typical/FE02Typical";
 const cx = classNames.bind(styles);
 
 function Home() {
+feature_bangdanh/#FE02_Typical-successfull-stories
     return (
         <FE02Typical/>
     )
