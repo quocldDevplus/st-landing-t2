@@ -11,9 +11,7 @@ const NavMenuFooter = () => (
             <div></div>
         </div>
         <ul className="nav-menu-footer__list">
-            <li className="nav-menu-footer__item">
-                <a className="nav-menu-footer__item-content" href=""></a>
-            </li>
+            <li className="nav-menu-footer__item">{/* <a className="nav-menu-footer__item-content" href=""></a> */}</li>
         </ul>
     </div>
 );
