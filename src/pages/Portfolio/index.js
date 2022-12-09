@@ -1,5 +1,9 @@
-function Fortfolio() {
-    return <h2>Fortfolio</h2>;
+import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
+
+function Stsoftware() {
+    return (
+        <Fe07_stsoftware/>
+    )
 }
 
-export default Fortfolio;
+export default Stsoftware;
