@@ -1,12 +1,9 @@
-
-import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
-
-function Fortfolio() {
+function Portfolio() {
     return (
         <div className="container">
-            <h2>Fortfolio</h2>
+            <h2>Portfolio</h2>
         </div>
     );
 }
 
-export default Stsoftware;
+export default Portfolio;
