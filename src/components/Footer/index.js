@@ -26,7 +26,9 @@ function Footer() {
                         <div className="col-md-4 col-sm-12 col-xs-12">
                             <NavMenuFooter />
                         </div>
-                        <div className="col-md-4 col-sm-12 col-xs-12">2</div>
+                        <div className="col-md-4 col-sm-12 col-xs-12">
+                            <h3>Contact us</h3>
+                        </div>
                         <div className="col-md-4 col-sm-12 col-xs-12">3</div>
                     </div>
                 </div>
