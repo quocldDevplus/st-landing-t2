@@ -1,29 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/layout';
-function App() {
+import FE02Typical from "~/components/FE02Typical/FE02Typical";
+import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
+import Header from "~/components/HeaderFake/Header";
+import {Outlet} from "react-router-dom";
+
+const App =() => {
     return (
-        <Router>
             <div className="App">
-                <Routes>
-                    {publicRoutes.map((route, index) => {
-                        const Page = route.component;
-                        let Layout = DefaultLayout;
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
-                                }
-                            />
-                        );
-                    })}
-                </Routes>
+           <Header/>
+                <Outlet/>
             </div>
-        </Router>
     );
 }
 
