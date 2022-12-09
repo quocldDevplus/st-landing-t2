@@ -50,7 +50,7 @@ const Fe07_stsoftware = () => {
             link: "see more"
         },
         {
-            id: "fe07-2", icon: <BsFillFlagFill/>, title: "Web App Development",
+            id: "fe07-2", icon: <BsFillFlagFill/>, title: "Mobile App Development",
             content: "ST provides custom mobile application development across different\n" +
                 "platforms such as iOS and Android for consumer-facing and enterprise\n" +
                 "environment.",
@@ -65,20 +65,20 @@ const Fe07_stsoftware = () => {
     ])
     const [listContextFe07D2, setListContextFe07D2] = useState([
         {
-            id: "fe07-4", icon: <FaUsers/>, title: "Web App Development",
+            id: "fe07-4", icon: <FaUsers/>, title: "Dedicated Team",
             content: "Dedicated Team model of cooperation provides high-quality software development services for our clients. " +
                 "Our Dedicated Teams offer clients a simple, affordable answer to build-up of any software development project." +
                 " Team sizes are adjusted to accommodate changing requirements and other needs.",
             link: "see more"
         },
         {
-            id: "fe07-5", icon: <BsFillFlagFill/>, title: "Web App Development",
+            id: "fe07-5", icon: <BsFillFlagFill/>, title: "Technology Consulting",
             content: "Whether you are optimizing costs, rolling out new IT initiatives, or identifying new growth opportunities, ST offers" +
                 " technology and software consulting services to help you respond to change and transform your business.",
             link: "see more"
         },
         {
-            id: "fe07-6", icon: <BsFillFlagFill/>, title: "Web App Development",
+            id: "fe07-6", icon: <BsFillFlagFill/>, title: "AI/Machine Learning",
             content: "Using the power of machine learning tools and technologies, our AI experts and development team offer " +
                 "comprehensive and cutting-edge solutions to your current or potential business needs.",
             link: "Read more"
