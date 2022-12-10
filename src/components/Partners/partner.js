@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./partner.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 

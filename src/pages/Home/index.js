@@ -11,7 +11,6 @@ function Home() {
     return (
         <>
             <FE02Typical/>
-            {/*<Partner/>*/}
         </>
     )
 }
