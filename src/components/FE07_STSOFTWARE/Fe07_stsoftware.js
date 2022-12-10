@@ -146,7 +146,7 @@ const Fe07_stsoftware = (props) => {
                             <Row className="fe07-context__wpb--block red">
                                 {listContextFe07D2 && listContextFe07D2.map((item, index) => {
                                     return (
-                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item._id}>
                                             <Row className="fe07-context__wpb--block--item">
                                                 <Col className="fe07-context__wpb--service">
                                                     <Row className="fe07-context__wpb--block--icon">
