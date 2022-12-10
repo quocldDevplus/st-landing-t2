@@ -5,10 +5,12 @@ import {FaUsers} from "react-icons/fa";
 import FE02TypicalChild from "../FE02Typical/TypicalChild/FE02TypicalChild";
 import {Row, Col} from 'react-bootstrap'
 import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
-import {getAllDataFE02, getAllDataFE07Div1} from "~/service/Apiservice";
+import {getAllDataFE02, getAllDataFE07Div1, getAllDataFE07Div2} from "~/service/Apiservice";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faBars, faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import async from "async";
 
-const Fe07_stsoftware = () => {
+const Fe07_stsoftware = (props) => {
     const [listFe07, setListFe07] = useState([
         {
             id: "fe07-1",
@@ -64,42 +66,50 @@ const Fe07_stsoftware = () => {
     //         link: "see more"
     //     }
     // ])
-    const [listContextFe07D2, setListContextFe07D2] = useState([
-        {
-            id: "fe07-4", icon: <FaUsers/>, title: "Dedicated Team",
-            content: "Dedicated Team model of cooperation provides high-quality software development services for our clients. " +
-                "Our Dedicated Teams offer clients a simple, affordable answer to build-up of any software development project." +
-                " Team sizes are adjusted to accommodate changing requirements and other needs.",
-            link: "see more"
-        },
-        {
-            id: "fe07-5", icon: <BsFillFlagFill/>, title: "Technology Consulting",
-            content: "Whether you are optimizing costs, rolling out new IT initiatives, or identifying new growth opportunities, ST offers" +
-                " technology and software consulting services to help you respond to change and transform your business.",
-            link: "see more"
-        },
-        {
-            id: "fe07-6", icon: <BsFillFlagFill/>, title: "AI/Machine Learning",
-            content: "Using the power of machine learning tools and technologies, our AI experts and development team offer " +
-                "comprehensive and cutting-edge solutions to your current or potential business needs.",
-            link: "Read more"
-        }
-
-    ])
+    // const [listContextFe07D2, setListContextFe07D2] = useState([
+    //     {
+    //         id: "fe07-4", icon: <FaUsers/>, title: "Dedicated Team",
+    //         content: "Dedicated Team model of cooperation provides high-quality software development services for our clients. " +
+    //             "Our Dedicated Teams offer clients a simple, affordable answer to build-up of any software development project." +
+    //             " Team sizes are adjusted to accommodate changing requirements and other needs.",
+    //         link: "see more"
+    //     },
+    //     {
+    //         id: "fe07-5", icon: <BsFillFlagFill/>, title: "Technology Consulting",
+    //         content: "Whether you are optimizing costs, rolling out new IT initiatives, or identifying new growth opportunities, ST offers" +
+    //             " technology and software consulting services to help you respond to change and transform your business.",
+    //         link: "see more"
+    //     },
+    //     {
+    //         id: "fe07-6", icon: <BsFillFlagFill/>, title: "AI/Machine Learning",
+    //         content: "Using the power of machine learning tools and technologies, our AI experts and development team offer " +
+    //             "comprehensive and cutting-edge solutions to your current or potential business needs.",
+    //         link: "Read more"
+    //     }
+    //
+    // ])
     const [listContextFe07D1, setListContextFe07D1] = useState([])
-    useEffect ( () =>{
+    const [listContextFe07D2, setListContextFe07D2] = useState([])
+    useEffect(() => {
         fetchListFE07Div1();
-    },[])
-    const fetchListFE07Div1 = async () =>{
-        let res =await getAllDataFE07Div1();
+    }, [])
+    const fetchListFE07Div1 = async () => {
+        let res = await getAllDataFE07Div1();
         setListContextFe07D1(res);
     }
-    useEffect ( () =>{
+    useEffect(() => {
         fetchListFE02();
-    },[])
-    const fetchListFE02 = async () =>{
-        let res =await getAllDataFE02();
+    }, [])
+    const fetchListFE02 = async () => {
+        let res = await getAllDataFE02();
         setListFe07(res);
+    }
+    useEffect(()=>{
+        fetchListFE07Div2();
+    },[])
+    const fetchListFE07Div2 = async () =>{
+        let res = await getAllDataFE07Div2();
+        setListContextFe07D2(res);
     }
     return (
         <>
@@ -113,10 +123,12 @@ const Fe07_stsoftware = () => {
                             <Row className="fe07-context__wpb--block red">
                                 {listContextFe07D1 && listContextFe07D1.map((item, index) => {
                                     return (
-                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item._id}>
                                             <Row className="fe07-context__wpb--block--item">
                                                 <Col className="fe07-context__wpb--service">
-                                                    <FontAwesomeIcon icon={item.icon} className="fe07-context__wpb--block--icon"/>
+                                                    <Row className="fe07-context__wpb--block--icon">
+                                                        <BsFillFlagFill/>
+                                                    </Row>
                                                     <Col className="fe07-context__wpb--block--content">
                                                         <h3>{item.title}</h3>
                                                         <p>{item.content}</p>
@@ -166,6 +178,7 @@ const Fe07_stsoftware = () => {
                             </Col>
                             <Col className="fe07-emptyspace"></Col>
                             <FE02TypicalChild
+                                key={props.key}
                                 listContainerFe02={listFe07}
                                 SetListContainerFe02={setListFe07}
                             />

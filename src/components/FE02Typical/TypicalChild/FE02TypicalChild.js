@@ -8,7 +8,7 @@ const FE02TypicalChild = (props) => {
         <Row className="fe02-wpb__col-container">
             {props.listContainerFe02 && props.listContainerFe02.map((item) => {
                 return (
-                    <Col key={item.id} className="fe02-wpb__col-context" md={3} xs={12}>
+                    <Col key={item._id} className="fe02-wpb__col-context" md={3} xs={12}>
                         <Row className="fe02-wpb__col-context__inner">
                             <Col className="fe02-wpb__col-context__inner__context">
                                 <Col className="fe02-wpb__col-context__inner__context__block">
