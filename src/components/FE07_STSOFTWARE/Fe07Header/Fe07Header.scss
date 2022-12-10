@@ -59,9 +59,20 @@
         line-height: 43px;
         font-weight: 500;
         margin: 0 0 10px;
+        @media (max-width: 913px) {
+          font-size: 36px
+        }
+        @media (max-width: 450px) {
+          font-size: 20px;
+        }
       }
       h2 {
-
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0 0 10px;
+        @media (max-width: 450px) {
+          font-size: 16px;
+        }
       }
     }
 

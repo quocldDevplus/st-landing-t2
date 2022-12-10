@@ -17,7 +17,7 @@ const FE02TypicalChild = (props) => {
                                     <Col className="fe02-wpb__caption--before">
                                         <Row className="fe02-wpb__caption__inner">
                                             <h4 className="fe02-wpb__caption__team--name">
-                                                <NavLink className="fe02-wpb__caption__teamCaption" to="src/components/task__bang/task1/FE02TypicalChild#">
+                                                <NavLink className="fe02-wpb__caption__teamCaption" to="">
                                                     {
                                                         item.teamCaption
                                                     }
@@ -36,7 +36,7 @@ const FE02TypicalChild = (props) => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <Link target="_blank" to="/" className="btn-FaLinkedin">
+                                                    <Link to="" className="btn-FaLinkedin">
                                                         <FaLinkedin style={{borderRadius: "7px"}}/>
                                                     </Link>
                                                 </li>

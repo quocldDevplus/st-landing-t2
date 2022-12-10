@@ -2,9 +2,11 @@ import './Fe07_stsoftware.scss'
 import {useEffect, useState} from "react";
 import {BsFillFlagFill} from "react-icons/bs";
 import {FaUsers} from "react-icons/fa";
-import FE02TypicalChild from "../FE02Typical/FE02TypicalChild";
+import FE02TypicalChild from "../FE02Typical/TypicalChild/FE02TypicalChild";
 import {Row, Col} from 'react-bootstrap'
 import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
+import {getAllDataFE02, getAllDataFE07Div1} from "~/service/Apiservice";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Fe07_stsoftware = () => {
     const [listFe07, setListFe07] = useState([
@@ -40,28 +42,28 @@ const Fe07_stsoftware = () => {
 
     ])
     // const [listFe07, setListFe07] = useState([])
-    const [listContextFe07D1, setListContextFe07D1] = useState([
-        {
-            id: "fe07-1", icon: <BsFillFlagFill/>, title: "Web App Development",
-            content: "We create beautifully designed web apps precisely tailored t" +
-                "o your situationWe deliver web systems of any size and complexity — from budding startu" +
-                "p products to hi-end enterprise solutions.",
-            link: "see more"
-        },
-        {
-            id: "fe07-2", icon: <BsFillFlagFill/>, title: "Mobile App Development",
-            content: "ST provides custom mobile application development across different\n" +
-                "platforms such as iOS and Android for consumer-facing and enterprise\n" +
-                "environment.",
-            link: "see more"
-        },
-        {
-            id: "fe07-3", icon: <BsFillFlagFill/>, title: "Custom Software Development",
-            content: "T provides high quality, cost-effective and reliable software development services match your specific needs, budget and timeframe." +
-                " We love to competes with other firms on the grounds of quality, creativity, n’ dedication",
-            link: "see more"
-        }
-    ])
+    // const [listContextFe07D1, setListContextFe07D1] = useState([
+    //     {
+    //         id: "fe07-1", icon: <BsFillFlagFill/>, title: "Web App Development",
+    //         content: "We create beautifully designed web apps precisely tailored t" +
+    //             "o your situationWe deliver web systems of any size and complexity — from budding startu" +
+    //             "p products to hi-end enterprise solutions.",
+    //         link: "see more"
+    //     },
+    //     {
+    //         id: "fe07-2", icon: <BsFillFlagFill/>, title: "Mobile App Development",
+    //         content: "ST provides custom mobile application development across different\n" +
+    //             "platforms such as iOS and Android for consumer-facing and enterprise\n" +
+    //             "environment.",
+    //         link: "see more"
+    //     },
+    //     {
+    //         id: "fe07-3", icon: <BsFillFlagFill/>, title: "Custom Software Development",
+    //         content: "T provides high quality, cost-effective and reliable software development services match your specific needs, budget and timeframe." +
+    //             " We love to competes with other firms on the grounds of quality, creativity, n’ dedication",
+    //         link: "see more"
+    //     }
+    // ])
     const [listContextFe07D2, setListContextFe07D2] = useState([
         {
             id: "fe07-4", icon: <FaUsers/>, title: "Dedicated Team",
@@ -84,21 +86,21 @@ const Fe07_stsoftware = () => {
         }
 
     ])
-    // const [listContextFe07D1, setListContextFe07D1] = useState([])
-    // useEffect ( () =>{
-    //     fetchListFE07Div1();
-    // },[])
-    // const fetchListFE07Div1 = async () =>{
-    //     let res =await getAllDataFE07Div1();
-    //     setListContextFe07D1(res);
-    // }
-    // useEffect ( () =>{
-    //     fetchListFE02();
-    // },[])
-    // const fetchListFE02 = async () =>{
-    //     let res =await getAllDataFE02();
-    //     setListFe07(res);
-    // }
+    const [listContextFe07D1, setListContextFe07D1] = useState([])
+    useEffect ( () =>{
+        fetchListFE07Div1();
+    },[])
+    const fetchListFE07Div1 = async () =>{
+        let res =await getAllDataFE07Div1();
+        setListContextFe07D1(res);
+    }
+    useEffect ( () =>{
+        fetchListFE02();
+    },[])
+    const fetchListFE02 = async () =>{
+        let res =await getAllDataFE02();
+        setListFe07(res);
+    }
     return (
         <>
             <Row className="fe07-container">
@@ -107,47 +109,49 @@ const Fe07_stsoftware = () => {
                     <Row className="fe07-container__wpb__inner">
                         <Row className="fe07-blank">
                         </Row>
-                        <Row className="fe07-context__wpb--block">
-                            {listContextFe07D1 && listContextFe07D1.map((item, index) => {
-                                return (
-                                    <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
-                                        <Row className="fe07-context__wpb--block--item">
-                                            <Col className="fe07-context__wpb--service">
-                                                <Row className="fe07-context__wpb--block--icon">
-                                                    {item.icon}
-                                                </Row>
-                                                <Col className="fe07-context__wpb--block--content">
-                                                    <h3>{item.title}</h3>
-                                                    <p>{item.content}</p>
-                                                    <a href="#">{item.link}</a>
+                        <Col className="fe07-context__wpb">
+                            <Row className="fe07-context__wpb--block red">
+                                {listContextFe07D1 && listContextFe07D1.map((item, index) => {
+                                    return (
+                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                            <Row className="fe07-context__wpb--block--item">
+                                                <Col className="fe07-context__wpb--service">
+                                                    <FontAwesomeIcon icon={item.icon} className="fe07-context__wpb--block--icon"/>
+                                                    <Col className="fe07-context__wpb--block--content">
+                                                        <h3>{item.title}</h3>
+                                                        <p>{item.content}</p>
+                                                        <a href="#">{item.link}</a>
+                                                    </Col>
                                                 </Col>
-                                            </Col>
-                                        </Row>
-                                    </Col>
-                                )
-                            })
-                            }
-                        </Row>
-                        <Row className="fe07-context__wpb--block">
-                            {listContextFe07D2 && listContextFe07D2.map((item, index) => {
-                                return (
-                                    <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
-                                        <Row className="fe07-context__wpb--block--item">
-                                            <Col className="fe07-context__wpb--service">
-                                                <Row className="fe07-context__wpb--block--icon">
-                                                    {item.icon}
-                                                </Row>
-                                                <Col className="fe07-context__wpb--block--content">
-                                                    <h3>{item.title}</h3>
-                                                    <p>{item.content}</p>
-                                                    <a href="#">{item.link}</a>
+                                            </Row>
+                                        </Col>
+                                    )
+                                })
+                                }
+                            </Row>
+                        </Col>
+                        <Row className="fe07-context__wpb">
+                            <Row className="fe07-context__wpb--block red">
+                                {listContextFe07D2 && listContextFe07D2.map((item, index) => {
+                                    return (
+                                        <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item.id}>
+                                            <Row className="fe07-context__wpb--block--item">
+                                                <Col className="fe07-context__wpb--service">
+                                                    <Row className="fe07-context__wpb--block--icon">
+                                                        {item.icon}
+                                                    </Row>
+                                                    <Col className="fe07-context__wpb--block--content">
+                                                        <h3>{item.title}</h3>
+                                                        <p>{item.content}</p>
+                                                        <a href="#">{item.link}</a>
+                                                    </Col>
                                                 </Col>
-                                            </Col>
-                                        </Row>
-                                    </Col>
-                                )
-                            })
-                            }
+                                            </Row>
+                                        </Col>
+                                    )
+                                })
+                                }
+                            </Row>
                         </Row>
                         {/*/////////////////////////////*/}
                         <Col className="fe07-wpb__wrapper">
