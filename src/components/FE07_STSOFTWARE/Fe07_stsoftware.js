@@ -11,38 +11,38 @@ import { faBars, faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-i
 import async from "async";
 
 const Fe07_stsoftware = (props) => {
-    const [listFe07, setListFe07] = useState([
-        {
-            id: "fe07-1",
-            image: "https://stunited.vn/wp-content/uploads/2019/09/Capture.png"
-            ,
-            teamCaption: "eHealth",
-            teamDesigner: "#ASP.NET #Android #iOS",
-            teamCaptionHide: "A health data management application for " +
-                "the personal healthcare in coordination with employers, pharmacies and medical examination providers."
-        },
-        {
-            id: "fe07-2", image: "https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png"
-            , teamCaption: "Havuta", teamDesigner: "#Blockchain #NodeJS #ReactJS #React Native",
-            teamCaptionHide: "\n" +
-                "                            Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency. "
-        },
-        {
-            id: "fe07-3", image: "https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg"
-            , teamCaption: "E-ASPRO", teamDesigner: "#Javascript #HTML #CSS",
-            teamCaptionHide: "E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management," +
-                " orders, shipping, inventory, and shipping inquiries from one system"
-        },
-        {
-            id: "fe07-4",
-            image: "https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg"
-            ,
-            teamCaption: "Vision Express",
-            teamDesigner: "#Chatbot #Javascript #HTML #CSS",
-            teamCaptionHide: "Chatbot to communicate with users, reply questions automatically."
-        },
-
-    ])
+    // const [listFe07, setListFe07] = useState([
+    //     {
+    //         id: "fe07-1",
+    //         image: "https://stunited.vn/wp-content/uploads/2019/09/Capture.png"
+    //         ,
+    //         teamCaption: "eHealth",
+    //         teamDesigner: "#ASP.NET #Android #iOS",
+    //         teamCaptionHide: "A health data management application for " +
+    //             "the personal healthcare in coordination with employers, pharmacies and medical examination providers."
+    //     },
+    //     {
+    //         id: "fe07-2", image: "https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png"
+    //         , teamCaption: "Havuta", teamDesigner: "#Blockchain #NodeJS #ReactJS #React Native",
+    //         teamCaptionHide: "\n" +
+    //             "                            Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency. "
+    //     },
+    //     {
+    //         id: "fe07-3", image: "https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg"
+    //         , teamCaption: "E-ASPRO", teamDesigner: "#Javascript #HTML #CSS",
+    //         teamCaptionHide: "E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management," +
+    //             " orders, shipping, inventory, and shipping inquiries from one system"
+    //     },
+    //     {
+    //         id: "fe07-4",
+    //         image: "https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg"
+    //         ,
+    //         teamCaption: "Vision Express",
+    //         teamDesigner: "#Chatbot #Javascript #HTML #CSS",
+    //         teamCaptionHide: "Chatbot to communicate with users, reply questions automatically."
+    //     },
+    //
+    // ])
     // const [listFe07, setListFe07] = useState([])
     // const [listContextFe07D1, setListContextFe07D1] = useState([
     //     {
@@ -90,6 +90,13 @@ const Fe07_stsoftware = (props) => {
     // ])
     const [listContextFe07D1, setListContextFe07D1] = useState([])
     const [listContextFe07D2, setListContextFe07D2] = useState([])
+    const [listFe07,setListFe07]=useState([])
+    const [backgroundImageFe07,SetBackgroundImageFe07] = useState([
+        { id : "1",backGroundFe07:"https://drive.google.com/uc?export=view&id=17pHRhgZBj5Uq3PV723tNz0eCuglZcorD"}
+    ])
+    const [bannerCaption,SetBannerCaption] = useState([
+        {id:"BnFe07",h1:"ST SOFTWARE",h2:"WE OFFER A WEALTH OF SERVICES TO ADDRESS YOUR TECHNOLOGY NEEDS." },
+    ])
     useEffect(() => {
         fetchListFE07Div1();
     }, [])
@@ -114,7 +121,12 @@ const Fe07_stsoftware = (props) => {
     return (
         <>
             <Row className="fe07-container">
-                <Fe07Header/>
+                <Fe07Header
+                    backgroundImageFe07 ={backgroundImageFe07}
+                    SetBackgroundImageFe07={SetBackgroundImageFe07}
+                    bannerCaption={bannerCaption}
+                    SetBannerCaption={SetBannerCaption}
+                />
                 <Col className="fe07-container__wpb">
                     <Row className="fe07-container__wpb__inner">
                         <Row className="fe07-blank">
@@ -127,7 +139,6 @@ const Fe07_stsoftware = (props) => {
                                             <Row className="fe07-context__wpb--block--item">
                                                 <Col className="fe07-context__wpb--service">
                                                     <Row className="fe07-context__wpb--block--icon">
-                                                        <BsFillFlagFill/>
                                                     </Row>
                                                     <Col className="fe07-context__wpb--block--content">
                                                         <h3>{item.title}</h3>
