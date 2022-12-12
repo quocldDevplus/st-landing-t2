@@ -66,10 +66,12 @@ return (
                             </h3>
                         </Col>
                         <div className="fe02-emptyspace"></div>
+                        <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
                             <FE02TypicalChild
                                 listContainerFe02={list}
                                 SetListContainerFe02={setList}
                             />
+                        </Row>
                     </Row>
                 </Row>
             </Col>
