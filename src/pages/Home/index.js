@@ -3,7 +3,8 @@ import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 /* import FE02Typical from "~/components/FE02Typical/FE02Typical";
 import Partner from "~/components/Partners/partner"; */
-import Joinus from '~/components/Joinus/joinus';
+import FE02Typical from "~/components/FE02Typical/FE02Typical";
+import Partner from "~/components/Partners/partner";
 
 
 const cx = classNames.bind(styles);
@@ -11,9 +12,8 @@ const cx = classNames.bind(styles);
 function Home() {
     return (
         <>
-            {/* <FE02Typical/>
-            <Partner/> */}
-            <Joinus />>
+             <FE02Typical/>
+             <Partner/>
         </>
     );
 }
