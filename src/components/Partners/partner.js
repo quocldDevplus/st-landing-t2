@@ -10,7 +10,7 @@ const Partner = () => {
   const navigationNextRef = useRef(null);
 
   return (
-    <div className="fe04-container">
+    <section className="fe04-container">
     <div className="fe04-container_partner container">
       <Col className="fe04-container_partner_title">
         <h2>Trusted by the Clients & Partners</h2>
@@ -19,7 +19,7 @@ const Partner = () => {
             Prev
           </Col>
           <Col ref={navigationNextRef} className="swiper_button swiper_next">
-            Ncext
+            Next
           </Col>
         </Row>
       </Col>
@@ -165,7 +165,7 @@ const Partner = () => {
         </Swiper>
       </div>
     </div>
-    </div>
+    </section>
   );
 };
 export default Partner;
