@@ -5,7 +5,7 @@ const Fe07Header = (props) => {
     const {backgroundImageFe07, SetBackgroundImageFe07} = props
     const {bannerCaption, SetBannerCaption} = props
     return (
-        <Row className="fe07-header-wrap">
+        <Row className="fe07-header-wrap" style={{margin:"0",padding:"0"}}>
             <Col className="fe07-header-media">
                 <Row className="fe07-banner-parallax">
                     <Row className="fe07-banner-bg-wrap">

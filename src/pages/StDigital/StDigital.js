@@ -1,6 +1,8 @@
-import StDigital from '../../components/StDigital/StDigital';
+import StDigital from "~/components/StDigital/StDigital";
 
-const PageStDigital = () => {
-    return <StDigital />;
-};
-export default PageStDigital;
+const StDigitalPage =() =>{
+    return(
+        <StDigital/>
+    )
+}
+export default StDigitalPage

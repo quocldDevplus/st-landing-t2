@@ -115,7 +115,7 @@ const Fe07_stsoftware = (props) => {
     }
     return (
         <>
-            <Row className="fe07-container">
+            <Row className="fe07-container" style={{margin:"0"}}>
                 <Fe07Header
                     backgroundImageFe07 ={backgroundImageFe07}
                     SetBackgroundImageFe07={SetBackgroundImageFe07}
@@ -184,11 +184,13 @@ const Fe07_stsoftware = (props) => {
                                 </h3>
                             </Col>
                             <Col className="fe07-emptyspace"></Col>
+                            <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
                             <FE02TypicalChild
                                 key={props.key}
                                 listContainerFe02={listFe07}
                                 SetListContainerFe02={setListFe07}
                             />
+                            </Row>
                         </Col>
                         <Row className="fe07-emptyspace" style={{height: "120px"}}>
                         </Row>
