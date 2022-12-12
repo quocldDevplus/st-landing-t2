@@ -3,43 +3,41 @@ import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './incubation.scss';
-import '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
+import FE02TypicalChild from '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
 
 const Incubation = () => {
     const [list2, setList2] = useState([
         {
-            id: 'fe02-1',
-            image: 'https://stunited.vn/wp-content/uploads/2019/09/Capture.png',
-            teamCaption: 'eHealth',
-            teamDesigner: '#ASP.NET #Android #iOS',
+            id: 'incu03-1',
+            image: 'https://stunited.vn/wp-content/uploads/2019/09/iot-e1567668899699.jpg',
+            teamCaption: 'IoT Space',
+            teamDesigner: '#coworking space',
             teamCaptionHide:
-                'A health data management application for ' +
-                'the personal healthcare in coordination with employers, pharmacies and medical examination providers.',
+                'Taking advantage of the co-founder team with experience in the software development, IoT Space aims to target customers who are developers, SMEs or tech start-up.                        ',
         },
         {
-            id: 'fe02-2',
-            image: 'https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png',
-            teamCaption: 'Havuta',
-            teamDesigner: '#Blockchain #NodeJS #ReactJS #React Native',
+            id: 'incu03-2',
+            image: 'https://stunited.vn/wp-content/uploads/2019/09/nomadspace.jpg',
+            teamCaption: 'Nomad Space',
+            teamDesigner: '#coworking space',
             teamCaptionHide:
-                '\n' +
-                '                            Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency. ',
+                'A casual, comfortable, and convenient place to work with the benefit of cafe service and a collaborative community. Nomad space is intend to digital nomad community for working, meetup, business exchange',
         },
         {
             id: 'fe02-3',
-            image: 'https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg',
-            teamCaption: 'E-ASPRO',
-            teamDesigner: '#Javascript #HTML #CSS',
+            image: 'https://stunited.vn/wp-content/uploads/2019/09/ciaoflora-1.jpg ',
+            teamCaption: 'Ciaoflora',
+            teamDesigner: '#ecommerce #flower delivery',
             teamCaptionHide:
-                'E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management,' +
-                ' orders, shipping, inventory, and shipping inquiries from one system',
+                'As a member of Interflora worldwide (ID 292), Ciaoflora Việt Nam is leading online flower service of Vietnam - which can not only offer express flower delivery (within 2-3 hours of ordering) and same day delivery but worldwide flower delivery too.',
         },
         {
             id: 'fe02-4',
-            image: 'https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg',
-            teamCaption: 'Vision Express',
-            teamDesigner: '#Chatbot #Javascript #HTML #CSS',
-            teamCaptionHide: 'Chatbot to communicate with users, reply questions automatically.',
+            image: 'https://stunited.vn/wp-content/uploads/2019/09/cafedat-1024x1024-1.jpg',
+            teamCaption: 'Cafe Dat - ダトコーヒー',
+            teamDesigner: '#coffee product',
+            teamCaptionHide:
+                'Cafe Dat is aiming not only bring the best coffee experience to consumers, but also to produce the highest quality coffee.',
         },
     ]);
     const [list, setList] = useState([
@@ -128,10 +126,20 @@ const Incubation = () => {
                                             );
                                         })}
                                 </Row>
-                                <Row className="incubating--project">
-                                    <Col className="incubating--cover"></Col>
-                                </Row>
                             </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className="ourincubation">
+                <Row className="ourincubation--cover">
+                    <Col className="ourincubation--container">
+                        <Row className="ourincubation--content">
+                            <h2 className="ourincubation--title"> Our incubating projects</h2>
+                            <h3 className="ourincubation--covertitle">We are supporting for these cool teams</h3>
+                        </Row>
+                        <Row className="fe02-wpb__col-container" style={{ padding: '0', margin: '0' }}>
+                            <FE02TypicalChild listContainerFe02={list2} SetListContainerFe02={setList2} />
                         </Row>
                     </Col>
                 </Row>
