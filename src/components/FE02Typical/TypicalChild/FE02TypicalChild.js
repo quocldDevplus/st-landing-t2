@@ -5,10 +5,10 @@ import {Col, Row} from "react-bootstrap";
 
 const FE02TypicalChild = (props) => {
     return (
-        <Row className="fe02-wpb__col-container">
+        <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
             {props.listContainerFe02 && props.listContainerFe02.map((item) => {
                 return (
-                    <Col key={item.id} className="fe02-wpb__col-context" md={3} xs={12}>
+                    <Col key={item._id} className="fe02-wpb__col-context" md={3} xs={12}>
                         <Row className="fe02-wpb__col-context__inner">
                             <Col className="fe02-wpb__col-context__inner__context">
                                 <Col className="fe02-wpb__col-context__inner__context__block">
@@ -17,7 +17,7 @@ const FE02TypicalChild = (props) => {
                                     <Col className="fe02-wpb__caption--before">
                                         <Row className="fe02-wpb__caption__inner">
                                             <h4 className="fe02-wpb__caption__team--name">
-                                                <NavLink className="fe02-wpb__caption__teamCaption" to="src/components/task__bang/task1/FE02TypicalChild#">
+                                                <NavLink className="fe02-wpb__caption__teamCaption" to="">
                                                     {
                                                         item.teamCaption
                                                     }
@@ -36,7 +36,7 @@ const FE02TypicalChild = (props) => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <Link target="_blank" to="/" className="btn-FaLinkedin">
+                                                    <Link to="" className="btn-FaLinkedin">
                                                         <FaLinkedin style={{borderRadius: "7px"}}/>
                                                     </Link>
                                                 </li>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./joinus.scss";
 
 const Joinus = () => {
