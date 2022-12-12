@@ -53,7 +53,7 @@ const FE02Typical = () => {
     },[])
 return (
     <>
-        <Row className="fe02-container">
+        <Row className="fe02-container" style={{margin:"0"}}>
             <Col className="fe02-container__wpb">
                 <Row className="fe02-container__wpb__inner">
                     <Row className="fe02-wpb__wrapper">
