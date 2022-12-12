@@ -5,7 +5,7 @@ import {Col, Row} from "react-bootstrap";
 
 const FE02TypicalChild = (props) => {
     return (
-        <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
+        <>
             {props.listContainerFe02 && props.listContainerFe02.map((item) => {
                 return (
                     <Col key={item._id} className="fe02-wpb__col-context" md={3} xs={12}>
@@ -85,7 +85,7 @@ const FE02TypicalChild = (props) => {
                 )
             })
             }
-        </Row>
+        </>
     )
 }
 export default FE02TypicalChild

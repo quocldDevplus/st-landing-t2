@@ -1,9 +1,7 @@
-import "./Portforlio.scss";
 import { useState } from "react";
-import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import PorforlioChild from "./PortforlioChild";
 import {Row, Col} from "react-bootstrap";
+import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
+import FE02TypicalChild from "~/components/FE02Typical/TypicalChild/FE02TypicalChild";
 
 
 const Portforlio = () => {
@@ -126,30 +124,45 @@ const Portforlio = () => {
       },
    
   ]);
+  const [backgroundImageFe07,SetBackgroundImageFe07] = useState([
+    { id : "1",backGroundFe07:"https://drive.google.com/uc?export=view&id=12btms3s2HW8gMKW_F_cG6Wvrrb95-94y"}
+  ])
+  const [bannerCaption,SetBannerCaption] = useState([
+    {id:"BnFe07",h1:"ST PORTFOLIO",h2:"From ideas turned into carefully crafted pixels and problems crafted into solutions." },
+  ])
  
   return (
-    <>
-      <Row className="Portforlio-container">
-        <Row className="Portforlio-container__wpb">
-          <Row className="Portforlio-container__wpb__inner">
-            <Row className="Portforlio-wpb__wrapper">
-              <Col className="Portforlio-textcenter">
-                <h2>Typical successful stories</h2>
-                <h3>
-                  From ideas turned into carefully crafted pixels and problems
-                  crafted into solutions.
-                </h3>
-              </Col>
-              <Row className="Portforlio-emptyspace"></Row>
-              <PorforlioChild
-                listContainer={list}
-                SetListContainer={setList}
-              />
+      <>
+        <Row className="fe02-container" style={{margin:"0"}}>
+          <Fe07Header
+              backgroundImageFe07 ={backgroundImageFe07}
+              SetBackgroundImageFe07={SetBackgroundImageFe07}
+              bannerCaption={bannerCaption}
+              SetBannerCaption={SetBannerCaption}
+          />
+          <Col className="fe02-container__wpb">
+            <Row className="fe02-container__wpb__inner">
+              <Row className="fe02-wpb__wrapper">
+                <Col className="fe02-textcenter">
+                  <h2>
+                    Typical successful stories
+                  </h2>
+                  <h3>
+                    From ideas turned into carefully crafted pixels and problems crafted into solutions.
+                  </h3>
+                </Col>
+                <div className="fe02-emptyspace"></div>
+                <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0", justifyContent:"left"}}>
+                <FE02TypicalChild
+                    listContainerFe02={list}
+                    SetListContainerFe02={setList}
+                />
+                </Row>
+              </Row>
             </Row>
-          </Row>
+          </Col>
         </Row>
-      </Row>
-    </>
+      </>
   );
 };
 export default Portforlio;

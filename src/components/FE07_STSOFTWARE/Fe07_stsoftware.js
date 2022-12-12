@@ -1,14 +1,9 @@
 import './Fe07_stsoftware.scss'
 import {useEffect, useState} from "react";
-import {BsFillFlagFill} from "react-icons/bs";
-import {FaUsers} from "react-icons/fa";
 import FE02TypicalChild from "../FE02Typical/TypicalChild/FE02TypicalChild";
 import {Row, Col} from 'react-bootstrap'
 import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
 import {getAllDataFE02, getAllDataFE07Div1, getAllDataFE07Div2} from "~/service/Apiservice";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faBars, faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import async from "async";
 
 const Fe07_stsoftware = (props) => {
     // const [listFe07, setListFe07] = useState([
@@ -132,13 +127,14 @@ const Fe07_stsoftware = (props) => {
                         <Row className="fe07-blank">
                         </Row>
                         <Col className="fe07-context__wpb">
-                            <Row className="fe07-context__wpb--block red">
+                            <Row className="fe07-context__wpb--block ">
                                 {listContextFe07D1 && listContextFe07D1.map((item, index) => {
                                     return (
                                         <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item._id}>
                                             <Row className="fe07-context__wpb--block--item">
                                                 <Col className="fe07-context__wpb--service">
                                                     <Row className="fe07-context__wpb--block--icon">
+                                                        <i className="fa-solid fa-flag"/>
                                                     </Row>
                                                     <Col className="fe07-context__wpb--block--content">
                                                         <h3>{item.title}</h3>
@@ -154,14 +150,14 @@ const Fe07_stsoftware = (props) => {
                             </Row>
                         </Col>
                         <Row className="fe07-context__wpb">
-                            <Row className="fe07-context__wpb--block red">
+                            <Row className="fe07-context__wpb--block ">
                                 {listContextFe07D2 && listContextFe07D2.map((item, index) => {
                                     return (
                                         <Col className="fe07-context__wpb--block--col" md={4} xs={12} key={item._id}>
                                             <Row className="fe07-context__wpb--block--item">
                                                 <Col className="fe07-context__wpb--service">
                                                     <Row className="fe07-context__wpb--block--icon">
-                                                        {item.icon}
+                                                        <i className={item.icon}/>
                                                     </Row>
                                                     <Col className="fe07-context__wpb--block--content">
                                                         <h3>{item.title}</h3>

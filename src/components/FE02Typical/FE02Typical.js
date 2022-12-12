@@ -53,7 +53,7 @@ const FE02Typical = () => {
     },[])
 return (
     <>
-        <Row className="fe02-container">
+        <Row className="fe02-container" style={{margin:"0"}}>
             <Col className="fe02-container__wpb">
                 <Row className="fe02-container__wpb__inner">
                     <Row className="fe02-wpb__wrapper">
@@ -66,10 +66,12 @@ return (
                             </h3>
                         </Col>
                         <div className="fe02-emptyspace"></div>
+                        <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
                             <FE02TypicalChild
                                 listContainerFe02={list}
                                 SetListContainerFe02={setList}
                             />
+                        </Row>
                     </Row>
                 </Row>
             </Col>
