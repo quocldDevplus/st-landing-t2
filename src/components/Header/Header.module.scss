@@ -22,6 +22,7 @@
     display: flex;
 }
 .nav-item {
+    cursor: pointer;
     list-style: none;
     padding: 0 15px;
     text-transform: uppercase;
@@ -31,32 +32,51 @@
 }
 .had-children {
     &:after {
+        color: white;
         font-family: FontAwesome, serif;
         margin: 0 0 0 10px;
         content: '\f0d7';
     }
+    &:hover {
+        color: #00aeef;
+    }
 }
-.had-children {
-    a:hover .sub-menu {
-        background-color: red;
-        display: block;
+
+.nav-item:hover {
+    .item-content {
+        color: #00aeef;
+        transition: 0.3s;
+    }
+    &:after {
+        color: #00aeef;
+        transition: 0.3s;
     }
 }
 .item-content {
     color: white;
-    &:hover {
-        color: #00aeef;
-    }
-    transition: 0.3s;
 }
 
 .sub-menu {
-    display: none;
+    transform: translateX(-15px);
+    opacity: 0;
+    overflow: hidden;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.95);
     min-width: 250px;
     box-shadow: 0 4px 5px rgb(0 0 0 / 15%);
     padding: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    top: 100px;
+}
+.had-children:hover {
+    .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        top: 90px;
+    }
 }
 .sub-item {
     list-style: none;

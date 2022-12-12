@@ -33,62 +33,54 @@ function MenuMobile() {
                     <div className="col"></div>
                 </div>
             </div>
-            {menuMobileToggle && (
-                <div>
-                    <nav className="nav-menu-mobile">
-                        <ul className="main-menu-mobile">
-                            {menuItems.map((item) => (
-                                <>
-                                    <li className="nav-item-mobile" key={item.id}>
-                                        {item.childrens ? (
-                                            <>
-                                                <NavLink
-                                                    onClick={handleBtnSubMenuMobile}
-                                                    className="had-children item-content"
-                                                >
-                                                    {item.content}
-                                                </NavLink>
-                                                {subMobileToggle ? (
-                                                    <FontAwesomeIcon
-                                                        className="sub-menu-mobile-icon"
-                                                        icon={faCaretDown}
-                                                    />
-                                                ) : (
-                                                    <FontAwesomeIcon
-                                                        className="sub-menu-mobile-icon"
-                                                        icon={faCaretRight}
-                                                    />
-                                                )}
-                                            </>
-                                        ) : (
-                                            <NavLink to={item.to} className="item-content">
-                                                {item.content}
-                                            </NavLink>
-                                        )}
-                                    </li>{' '}
-                                    {subMobileToggle ? (
-                                        <ul className="sub-menu-mobile">
-                                            {item.childrens ? (
-                                                item.childrens.map((itemChildren) => (
-                                                    <li className="sub-item-mobile" key={itemChildren.id}>
-                                                        <NavLink to={item.to} className="item-content-mobile">
-                                                            {itemChildren.content}
-                                                        </NavLink>
-                                                    </li>
-                                                ))
+            <div className={`nav-menu-mobile-dropdown ${menuMobileToggle ? 'nav-menu-mobile-dropdown-active' : ''}`}>
+                <nav className="nav-menu-mobile">
+                    <ul className="main-menu-mobile">
+                        {menuItems.map((item) => (
+                            <>
+                                <li
+                                    className={`nav-item-mobile ${
+                                        item.childrens && subMobileToggle ? 'nav-item-mobile-active' : ''
+                                    } ${item.childrens && 'nav-item-mobile--had-children'}`}
+                                    key={item.id}
+                                >
+                                    {item.childrens ? (
+                                        <button className="nav-item-mobile-active-btn" onClick={handleBtnSubMenuMobile}>
+                                            <NavLink className="item-content">{item.content}</NavLink>
+                                            {subMobileToggle ? (
+                                                <FontAwesomeIcon className="sub-menu-mobile-icon" icon={faCaretDown} />
                                             ) : (
-                                                <></>
+                                                <FontAwesomeIcon className="sub-menu-mobile-icon" icon={faCaretRight} />
                                             )}
-                                        </ul>
+                                        </button>
                                     ) : (
-                                        <></>
+                                        <NavLink to={item.to} className="item-content">
+                                            {item.content}
+                                        </NavLink>
                                     )}
-                                </>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
-            )}
+                                </li>
+                                {item.childrens && (
+                                    <ul
+                                        className={`sub-menu-mobile ${subMobileToggle ? 'sub-menu-mobile-active' : ''}`}
+                                    >
+                                        {item.childrens ? (
+                                            item.childrens.map((itemChildren) => (
+                                                <li className="sub-item-mobile" key={itemChildren.id}>
+                                                    <NavLink to={itemChildren.to} className="item-content-mobile">
+                                                        {itemChildren.content}
+                                                    </NavLink>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <></>
+                                        )}
+                                    </ul>
+                                )}
+                            </>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
         </div>
     );
 }
