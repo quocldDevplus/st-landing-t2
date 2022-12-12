@@ -1,8 +1,7 @@
+import Portforlio from "~/components/Portforlio/Portforlio";
+
 function Portfolio() {
-    return (
-        <div className="container">
-            <h2>Portfolio</h2>
-        </div>
+    return (<Portforlio/>
     );
 }
 
