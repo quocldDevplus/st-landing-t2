@@ -1,5 +1,9 @@
-function Fortfolio() {
-    return <h2>Fortfolio</h2>;
+function Portfolio() {
+    return (
+        <div className="container">
+            <h2>Portfolio</h2>
+        </div>
+    );
 }
 
-export default Fortfolio;
+export default Portfolio;
