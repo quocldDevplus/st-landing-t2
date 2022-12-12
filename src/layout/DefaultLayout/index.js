@@ -12,9 +12,7 @@ function DefaultLayout({ children }) {
                 <Header />
             </div>
             <div className={cx('body-section')}>{children}</div>
-            <div className={cx('footer-section')}>
-                <Footer />
-            </div>
+            <div className={cx('footer-section')}>{/* <Footer /> */}</div>
         </div>
     );
 }

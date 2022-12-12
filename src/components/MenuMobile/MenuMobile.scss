@@ -38,6 +38,21 @@
 .nav-menu-mobile {
     width: 100%;
 }
+
+.nav-menu-mobile-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.nav-menu-mobile-dropdown-active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
 .main-menu-mobile {
     list-style: none;
     padding: 0;
@@ -56,7 +71,7 @@
     position: relative;
 }
 .nav-item-mobile:hover {
-    color: #00aeef;
+    background: #00aeef;
 }
 .had-children {
     display: flex;
@@ -73,14 +88,26 @@
     font-size: 14px;
     font-weight: 500;
 }
+.item-content:hover {
+    color: #004274;
+}
 .sub-menu-mobile {
     padding: 0;
-    display: flex;
+    overflow: hidden;
+    height: 0;
     list-style: none;
     position: relative;
     z-index: 99;
     width: 100%;
     flex-direction: column;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.sub-menu-mobile-active {
+    visibility: visible;
+    height: 144px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
 }
 .sub-item-mobile {
     padding: 15px 23px;
@@ -98,4 +125,25 @@
 }
 .item-content-mobile:hover {
     color: #ffffff;
+}
+
+.nav-item-mobile-active {
+    background-color: rgba(0, 174, 239, 1);
+    a {
+        color: #ffffff;
+    }
+    a:hover {
+        color: #ffffff;
+    }
+}
+
+.nav-item-mobile--had-children {
+    padding: 0;
+}
+
+.nav-item-mobile-active-btn {
+    padding: 15px 23px;
+    background: none;
+    width: 100%;
+    display: flex;
 }
