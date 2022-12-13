@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './incubation.scss';
 import FE02TypicalChild from '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
+import Fe07Header from '../FE07_STSOFTWARE/Fe07Header/Fe07Header';
 
 const Incubation = () => {
     const [list2, setList2] = useState([
@@ -63,25 +64,36 @@ const Incubation = () => {
                 ' ST United is considering an early stage VC fund that invests in technology startups in Vietnam, particularly Danang, at their early and growth stages. We provide funding, and assistance by establishing strategic partnerships to help startups scale their businesses',
         },
     ]);
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState([
+        {
+            id: '1',
+            backGroundFe07: 'https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg',
+        },
+    ]);
+    const [bannerCaption, SetBannerCaption] = useState([
+        {
+            id: 'BnFe07',
+            h1: 'ST INCUBATION',
+            h2: "We're not a mentor, expert or coach whatsoever. We are a founder and fight together",
+        },
+    ]);
     return (
         <div className="incubation--container">
-            <Row className="banner--container">
-                <Col className="banner--background"></Col>
-            </Row>
-            <Row className="banner--content">
-                <Col className="banner-title">
-                    <h1 className="banner--title">ST INCUBATION</h1>
-                    <h2 className="banner--sub">
-                        We're not a mentor, expert or coach whatsoever. We are a founder and fight together
-                    </h2>
-                </Col>
+            <Row className="banner--container" style={{ margin: '0' }}>
+                {' '}
+                <Fe07Header
+                    backgroundImageFe07={backgroundImageFe07}
+                    SetBackgroundImageFe07={SetBackgroundImageFe07}
+                    bannerCaption={bannerCaption}
+                    SetBannerCaption={SetBannerCaption}
+                />
             </Row>
             <Container className="st--incubation--container">
                 <Row className="st--incubation--cover--container">
                     <Col className="st--incubation">
                         <Row className="incubation--content">
                             <Col className="incubation--title" md={12} sm={12} xs={12}>
-                                <h1>ST INCUBATION</h1>
+                                <h1 className="incubation--title--h1">ST INCUBATION</h1>
                             </Col>
                             <Col className="incubation--description" md={12} sm={12} xs={12}>
                                 <Row className="incubation--cover--description">
@@ -131,19 +143,21 @@ const Incubation = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container className="ourincubation">
-                <Row className="ourincubation--cover">
-                    <Col className="ourincubation--container">
-                        <Row className="ourincubation--content">
-                            <h2 className="ourincubation--title"> Our incubating projects</h2>
-                            <h3 className="ourincubation--covertitle">We are supporting for these cool teams</h3>
-                        </Row>
-                        <Row className="fe02-wpb__col-container" style={{ padding: '0', margin: '0' }}>
-                            <FE02TypicalChild listContainerFe02={list2} SetListContainerFe02={setList2} />
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
+            <div className="ourincubation--background">
+                <Container className="ourincubation--container">
+                    <Row className="ourincubation--cover">
+                        <Col className="ourincubation" sm={12}>
+                            <Row className="ourincubation--content">
+                                <h2 className="ourincubation--title"> Our incubating projects</h2>
+                                <h3 className="ourincubation--covertitle">We are supporting for these cool teams</h3>
+                            </Row>
+                            <Row className="fe02-wpb__col-container" style={{ padding: '0', margin: '0' }}>
+                                <FE02TypicalChild listContainerFe02={list2} SetListContainerFe02={setList2} />
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 };
