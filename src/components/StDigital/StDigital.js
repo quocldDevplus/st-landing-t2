@@ -1,9 +1,9 @@
 import './StDigital.scss';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
 import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
-import {getAllDataPortfolio, getAllDataStDigitalIcon, getAllDataStDigitalImage} from "~/service/Apiservice";
+import { getAllDataPortfolio, getAllDataStDigitalIcon, getAllDataStDigitalImage } from '~/service/Apiservice';
 
 const StDigital = () => {
     // const [list, setList] = useState([
@@ -60,21 +60,21 @@ const StDigital = () => {
     //         Name: 'Thinh, Nguyen Duc',
     //         Work: 'Amazon Business Executive',
     //     },
-    //
+
     //     {
     //         id: 'img6',
     //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.33.52-AM-e1567740899939.png',
     //         Name: 'Toan Pham',
     //         Work: 'Tool Developer',
     //     },
-    //
+
     //     {
     //         id: 'img7',
     //         img: 'https://stunited.vn/wp-content/uploads/2019/09/46826207_2335699766654103_6405298755335094272_o-e1567741149586-480x480.jpg',
     //         Name: 'Ngan, Tran Mai',
     //         Work: 'Amazon Business Executive',
     //     },
-    //
+
     //     {
     //         id: 'img8',
     //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.48.02-AM-e1567741771971.png',
@@ -82,37 +82,33 @@ const StDigital = () => {
     //         Work: 'Amazon Business Executive',
     //     },
     // ]);
-    const [backgroundImageFe07, SetBackgroundImageFe07] = useState([
-        {
-            id: '1',
-            backGroundFe07: 'https://drive.google.com/uc?export=view&id=1txXzanwmlTUCVlBVRsBiUAQqmvWWT6Z2',
-        },
-    ]);
-    const [bannerCaption, SetBannerCaption] = useState([
-        {
-            id: 'BnFe07',
-            h1: 'ST DIGITAL',
-            h2: 'Offshore Digital Marketing Services',
-        },
-    ]);
-    const [list, setList] = useState([])
-    const [listuser, setlistuser] = useState([])
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState({
+        id: '1',
+        backGroundFe07: 'https://drive.google.com/uc?export=view&id=1txXzanwmlTUCVlBVRsBiUAQqmvWWT6Z2',
+    });
+    const [bannerCaption, SetBannerCaption] = useState({
+        id: 'BnFe07',
+        h1: 'ST DIGITAL',
+        h2: 'Offshore Digital Marketing Services',
+    });
+    const [list, setList] = useState([]);
+    const [listuser, setlistuser] = useState([]);
 
     useEffect(() => {
         fetchListstDigitalIcon();
-    }, [])
+    }, []);
     const fetchListstDigitalIcon = async () => {
         let res = await getAllDataStDigitalIcon();
         setList(res);
-    }
+    };
 
     useEffect(() => {
         fetchListstDigitalImage();
-    }, [])
+    }, []);
     const fetchListstDigitalImage = async () => {
         let res = await getAllDataStDigitalImage();
         setlistuser(res);
-    }
+    };
     return (
         <Row className="Stdigital-container" style={{ margin: '0' }}>
             <Fe07Header
@@ -155,7 +151,7 @@ const StDigital = () => {
                                                             <img
                                                                 width="60"
                                                                 height="60"
-                                                                src={item.img}
+                                                                src={item.image}
                                                                 alt=""
                                                                 srcset=""
                                                             />
@@ -176,26 +172,32 @@ const StDigital = () => {
                                         </Row>
                                     </Col>
                                 </Row>
-                                <Col className="Stdigital-module-block">
-                                    <Row className="Stdigital-module-3 ">
-                                        {listuser &&
-                                            listuser.map((item, index) => {
-                                                return (
-                                                    <Row className="Stdigital-list-user col-md-3">
-                                                        <Col className="Stdigital-wrapper-list">
-                                                            <Row className="Stdigital-wrapper-list-user ">
-                                                                <img width="300" height="300" src={item.img}></img>
-                                                                <p>
-                                                                    <strong> {item.Name}</strong>
-                                                                    <br /> {item.Work}
-                                                                </p>
-                                                            </Row>
-                                                        </Col>
-                                                    </Row>
-                                                );
-                                            })}
-                                    </Row>
-                                </Col>
+                                <Row className="Stdigital-module-container">
+                                    <Col className="Stdigital-module-block">
+                                        <Row className="Stdigital-module-3 ">
+                                            {listuser &&
+                                                listuser.map((item, index) => {
+                                                    return (
+                                                        <Row className="Stdigital-list-user col-md-3">
+                                                            <Col className="Stdigital-wrapper-list">
+                                                                <Row className="Stdigital-wrapper-list-user ">
+                                                                    <img
+                                                                        width="300"
+                                                                        height="300"
+                                                                        src={item.image}
+                                                                    ></img>
+                                                                    <p>
+                                                                        <strong> {item.Name}</strong>
+                                                                        <br /> {item.Work}
+                                                                    </p>
+                                                                </Row>
+                                                            </Col>
+                                                        </Row>
+                                                    );
+                                                })}
+                                        </Row>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Col>
                     </Col>
