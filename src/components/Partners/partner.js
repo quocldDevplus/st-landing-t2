@@ -10,50 +10,6 @@ const Partner = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const [list] = useState([
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/vsec_logo1-1-150x150.png",
-      link: "http://vsec.com.vn",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/1544156780812-72-2-150x150.png",
-      link: "http://mti-vietnam.vn",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/af90ab46-05fd-11e7-9e7d-cac091044fd5-2-150x150.jpg",
-      link: "http://tmsgroup.vn",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2019/08/logo-1-150x150.png",
-      link: "https://mobifone.vn",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/68730533_678381192676224_5237130520554373120_n-150x150.png",
-      link: "https://www.gitstart.com/",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/logo700px-duongban-01-1-150x150.png",
-      link: "https://www.flexidata.vn/",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2019/08/codecomplete-logo-150x150.png",
-      link: "https://www.facebook.com/codecompletevietnam/",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2019/08/Synova-Logo-WebRetina-w-018-1-150x150.png",
-      link: "https://synova-solutions.com/",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2016/03/b4cbe5b535d3de27d3835854cb64b56d-1165x550-c-center-1-150x150.jpg",
-      link: "https://www.hollows.org",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2019/08/26170224_2060251644219912_7814952797271844429_o-150x150.jpg",
-      link: "http://www.alacartedanangbeach.com/",
-    },
-    {
-      logo: "https://stunited.vn/wp-content/uploads/2019/08/Logo.ZenDiamondSuites12-150x150.jpg",
-      link: "https://zendiamondsuites.com/",
-    },
   ])
   return (
     <section className="fe04-container">
@@ -121,13 +77,12 @@ const Partner = () => {
           className="mySwiper"
         >
           {list.map((item) => {
-            let { logo, link } = item;
             return(
               <SwiperSlide>
                 <div className='partner-item'>
-                        <a href={link}>
+                        <a href={item.link}>
                           {' '}
-                          <img src={logo} alt=""/>
+                          <img src={item.image} alt=""/>
                         </a>
                       </div>
               </SwiperSlide>
