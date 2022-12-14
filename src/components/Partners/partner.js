@@ -1,12 +1,12 @@
-import {useEffect, useRef} from "react";
-import "./partner.scss";
-import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css/navigation";
-import {Pagination, Navigation, Autoplay} from "swiper";
-import {Row, Col} from "react-bootstrap";
-import {useState} from "react";
-import axios from "axios";
-import {getAllDataPartner} from "~/service/Apiservice";
+import { useEffect, useRef } from 'react';
+import './partner.scss';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from 'swiper';
+import { Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
+import axios from 'axios';
+import { getAllDataPartner } from '~/service/Apiservice';
 
 const Partner = () => {
     const navigationPrevRef = useRef(null);
@@ -57,14 +57,14 @@ const Partner = () => {
     //     link: "https://zendiamondsuites.com/",
     //   },
     // ])
-    const [list, setList] = useState([])
+    const [list, setList] = useState([]);
     useEffect(() => {
-        fetchListPartner()
-    }, [])
+        fetchListPartner();
+    }, []);
     const fetchListPartner = async () => {
-        let res = await getAllDataPartner()
-        setList(res)
-    }
+        let res = await getAllDataPartner();
+        setList(res);
+    };
 
     return (
         <section className="fe04-container">
@@ -82,7 +82,6 @@ const Partner = () => {
                 </Col>
                 <div className="fe04-container_partner swiper">
                     <Swiper
-
                         speed={500}
                         grabCursor={true}
                         pagination={{
@@ -92,7 +91,6 @@ const Partner = () => {
                             delay: 3500,
                             stopOnLastSlide: true,
                         }}
-
                         navigation={{
                             prevEl: navigationPrevRef.current,
                             nextEl: navigationNextRef.current,
@@ -102,7 +100,6 @@ const Partner = () => {
                             swiper.params.navigation.nextEl = navigationNextRef.current;
                         }}
                         modules={[Pagination, Navigation, Autoplay]}
-
                         slidesPerView={4}
                         slidesPerGroup={4}
                         breakpoints={{
@@ -130,16 +127,17 @@ const Partner = () => {
                         className="mySwiper"
                     >
                         {list.map((item) => {
+                            let { logo, link } = item;
                             return (
                                 <SwiperSlide>
-                                    <div className='partner-item'>
-                                        <a href={item.link}>
+                                    <div className="partner-item">
+                                        <a href={link}>
                                             {' '}
-                                            <img src={item.image} alt=""/>
+                                            <img src={logo} alt="" />
                                         </a>
                                     </div>
                                 </SwiperSlide>
-                            )
+                            );
                         })}
                     </Swiper>
                 </div>
