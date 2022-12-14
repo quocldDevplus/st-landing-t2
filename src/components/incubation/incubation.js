@@ -102,7 +102,7 @@ const Incubation = () => {
                                             <span className="s1">
                                                 After long time working in software development outsourcing industry,
                                                 founders of
-                                                <strong> ST United </strong>
+                                                <strong className="s1--strong"> ST United </strong>
                                                 still keep intense aspiration how to apply the high technologies to
                                                 solve the society problem in Vietnam.
                                             </span>
@@ -110,11 +110,11 @@ const Incubation = () => {
                                         <p className="p1">
                                             <span className="s1">
                                                 Beginning as a provider of co-working spaces with
-                                                <strong> IoT Space </strong>
+                                                <strong className="s1--strong"> IoT Space </strong>
                                                 and Nomad Space in Danang,
-                                                <strong> ST United </strong>
+                                                <strong className="s1--strong"> ST United </strong>
                                                 would like to support the startup and ICT community. Moreover,
-                                                <strong> ST United </strong>
+                                                <strong className="s1--strong"> ST United </strong>
                                                 provides incubator programs for budding entrepreneurs. The program
                                                 focuses on providing resources and support for startups in terms of
                                                 business modeling, market penetration and even product development.
