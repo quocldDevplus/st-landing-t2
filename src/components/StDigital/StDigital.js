@@ -1,86 +1,87 @@
 import './StDigital.scss';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
 import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
+import {getAllDataPortfolio, getAllDataStDigitalIcon, getAllDataStDigitalImage} from "~/service/Apiservice";
 
 const StDigital = () => {
-    const [list, setList] = useState([
-        {
-            id: 'imgicon1',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/seo.png',
-            title: 'SEO',
-            description:
-                'With ST Digital, your outsourced staff in the Vietnam will render Search Engine Optimisation services guaranteed to boost your visibility and accessibility online by helping you climb up to the top of Search Engine Results Pages (SERPs). Changing times call for changing your business strategies, and our goal is to help you grow as well as keep up with the times.',
-        },
-        {
-            id: 'imgicon2',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/marketing-300x300.png',
-            title: 'Social Media Service',
-            description:
-                'Our social media services is a commonly used method for directing traffic onto your website or specific content through increased visibility in different social media sites and engaging with your audience in the same platform. It is commonly synthesised to support SEO efforts and helps your brand to become easily accessible to your audience.',
-        },
-        {
-            id: 'imgicon2',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/webdesign-icon-300x300.png',
-            title: 'Graphic Design',
-            description:
-                'Sensible and engaging, our design studio is here to help you effectively communicate your brand online. We help you create a meaningful and lasting impression with your customers, leading to new opportunities for your business.',
-        },
-    ]);
-    const [listuser, setlistuser] = useState([
-        {
-            id: 'img1',
-            img: 'http://dev.stunited.vn/wp-content/uploads/2019/09/20431332_1805663032784139_2478410876069611325_n-300x300.jpg',
-            Name: 'Hoa, Le My',
-            Work: 'Digital Marketer',
-        },
-        {
-            id: 'img2',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-9.57.56-AM-e1567738897606.png',
-            Name: 'Quoc Phan',
-            Work: 'Creative Designer',
-        },
-        {
-            id: 'img3',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/39309617_2207185245989746_4586629101913112576_n-480x480.jpg',
-            Name: 'Thuong, Pham Quynh',
-            Work: 'Digital Marketer',
-        },
-        {
-            id: 'img4',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/20190306_193427_746-1-e1567739330543-482x480.jpg',
-            Name: 'Anh, Vo Quynh',
-            Work: 'Digital Marketer',
-        },
-        {
-            id: 'img5',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.14.48-AM-e1567739750539.png',
-            Name: 'Thinh, Nguyen Duc',
-            Work: 'Amazon Business Executive',
-        },
-
-        {
-            id: 'img6',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.33.52-AM-e1567740899939.png',
-            Name: 'Toan Pham',
-            Work: 'Tool Developer',
-        },
-
-        {
-            id: 'img7',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/46826207_2335699766654103_6405298755335094272_o-e1567741149586-480x480.jpg',
-            Name: 'Ngan, Tran Mai',
-            Work: 'Amazon Business Executive',
-        },
-
-        {
-            id: 'img8',
-            img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.48.02-AM-e1567741771971.png',
-            Name: 'Loi Mai',
-            Work: 'Amazon Business Executive',
-        },
-    ]);
+    // const [list, setList] = useState([
+    //     {
+    //         id: 'imgicon1',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/seo.png',
+    //         title: 'SEO',
+    //         description:
+    //             'With ST Digital, your outsourced staff in the Vietnam will render Search Engine Optimisation services guaranteed to boost your visibility and accessibility online by helping you climb up to the top of Search Engine Results Pages (SERPs). Changing times call for changing your business strategies, and our goal is to help you grow as well as keep up with the times.',
+    //     },
+    //     {
+    //         id: 'imgicon2',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/marketing-300x300.png',
+    //         title: 'Social Media Service',
+    //         description:
+    //             'Our social media services is a commonly used method for directing traffic onto your website or specific content through increased visibility in different social media sites and engaging with your audience in the same platform. It is commonly synthesised to support SEO efforts and helps your brand to become easily accessible to your audience.',
+    //     },
+    //     {
+    //         id: 'imgicon2',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/webdesign-icon-300x300.png',
+    //         title: 'Graphic Design',
+    //         description:
+    //             'Sensible and engaging, our design studio is here to help you effectively communicate your brand online. We help you create a meaningful and lasting impression with your customers, leading to new opportunities for your business.',
+    //     },
+    // ]);
+    // const [listuser, setlistuser] = useState([
+    //     {
+    //         id: 'img1',
+    //         img: 'http://dev.stunited.vn/wp-content/uploads/2019/09/20431332_1805663032784139_2478410876069611325_n-300x300.jpg',
+    //         Name: 'Hoa, Le My',
+    //         Work: 'Digital Marketer',
+    //     },
+    //     {
+    //         id: 'img2',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-9.57.56-AM-e1567738897606.png',
+    //         Name: 'Quoc Phan',
+    //         Work: 'Creative Designer',
+    //     },
+    //     {
+    //         id: 'img3',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/39309617_2207185245989746_4586629101913112576_n-480x480.jpg',
+    //         Name: 'Thuong, Pham Quynh',
+    //         Work: 'Digital Marketer',
+    //     },
+    //     {
+    //         id: 'img4',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/20190306_193427_746-1-e1567739330543-482x480.jpg',
+    //         Name: 'Anh, Vo Quynh',
+    //         Work: 'Digital Marketer',
+    //     },
+    //     {
+    //         id: 'img5',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.14.48-AM-e1567739750539.png',
+    //         Name: 'Thinh, Nguyen Duc',
+    //         Work: 'Amazon Business Executive',
+    //     },
+    //
+    //     {
+    //         id: 'img6',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.33.52-AM-e1567740899939.png',
+    //         Name: 'Toan Pham',
+    //         Work: 'Tool Developer',
+    //     },
+    //
+    //     {
+    //         id: 'img7',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/46826207_2335699766654103_6405298755335094272_o-e1567741149586-480x480.jpg',
+    //         Name: 'Ngan, Tran Mai',
+    //         Work: 'Amazon Business Executive',
+    //     },
+    //
+    //     {
+    //         id: 'img8',
+    //         img: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.48.02-AM-e1567741771971.png',
+    //         Name: 'Loi Mai',
+    //         Work: 'Amazon Business Executive',
+    //     },
+    // ]);
     const [backgroundImageFe07, SetBackgroundImageFe07] = useState([
         {
             id: '1',
@@ -94,6 +95,24 @@ const StDigital = () => {
             h2: 'Offshore Digital Marketing Services',
         },
     ]);
+    const [list, setList] = useState([])
+    const [listuser, setlistuser] = useState([])
+
+    useEffect(() => {
+        fetchListstDigitalIcon();
+    }, [])
+    const fetchListstDigitalIcon = async () => {
+        let res = await getAllDataStDigitalIcon();
+        setList(res);
+    }
+
+    useEffect(() => {
+        fetchListstDigitalImage();
+    }, [])
+    const fetchListstDigitalImage = async () => {
+        let res = await getAllDataStDigitalImage();
+        setlistuser(res);
+    }
     return (
         <Row className="Stdigital-container" style={{ margin: '0' }}>
             <Fe07Header
