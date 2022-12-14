@@ -1,10 +1,12 @@
-import { useRef } from "react";
+import {useEffect, useRef} from "react";
 import "./partner.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper";
-import { Row, Col } from "react-bootstrap";
-import { useState } from "react";
+import {Pagination, Navigation, Autoplay} from "swiper";
+import {Row, Col} from "react-bootstrap";
+import {useState} from "react";
+import axios from "axios";
+import {getAllDataPartner} from "~/service/Apiservice";
 
 const Partner = () => {
   const navigationPrevRef = useRef(null);

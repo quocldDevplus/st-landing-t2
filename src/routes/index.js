@@ -1,10 +1,11 @@
 //Layouts
 import Home from '~/pages/Home';
 import WhoWeAre from '~/pages/WhoWeAre';
-import Portfolio from "~/pages/Portfolio";
-import stSoftWare from "~/pages/stSoftWare/StSoftWare";
-import JoinUs from "~/pages/JoinUs/JoinUs";
-import StDigitalPage from "~/pages/StDigital/StDigital";
+
+import Portfolio from '~/pages/Portfolio';
+import stSoftWare from '~/pages/stSoftWare/StSoftWare';
+import JoinUs from '~/pages/JoinUs/JoinUs';
+import StDigitalPage from '~/pages/StDigital/StDigital';
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/st-software', component: stSoftWare },
