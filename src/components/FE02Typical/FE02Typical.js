@@ -40,13 +40,14 @@ const FE02Typical = () => {
     // ])
     const [list, setList] = useState([])
 
-    const fetchListFE02 = async () => {
+    const fetchListFE02 =  () => {
         // axios.get(`http://localhost:8000/fe02-typical`)
         //     .then(res => {
         //         setList(res.data);
         //     })
-        const res = await getAllDataFE02();
-        setList(res);
+        return getAllDataFE02().then((body) => {
+            setList(body)
+        });
     }
     useEffect ( () =>{
         fetchListFE02();
