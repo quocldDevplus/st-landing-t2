@@ -120,16 +120,16 @@ const Portforlio = () => {
     //             'Coherent uses technology and data to solve the toughest challenges that insurers and intermediaries face on a daily basis.',
     //     },
     // ]);
-    const [backgroundImageFe07, SetBackgroundImageFe07] = useState([
-        { id: '1', backGroundFe07: 'https://drive.google.com/uc?export=view&id=12btms3s2HW8gMKW_F_cG6Wvrrb95-94y' },
-    ]);
-    const [bannerCaption, SetBannerCaption] = useState([
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState(
+        { id:'1', backGroundFe07:'https://drive.google.com/uc?export=view&id=12btms3s2HW8gMKW_F_cG6Wvrrb95-94y' },
+    );
+    const [bannerCaption, SetBannerCaption] = useState(
         {
             id: 'BnFe07',
             h1: 'ST PORTFOLIO',
             h2: 'From ideas turned into carefully crafted pixels and problems crafted into solutions.',
         },
-    ]);
+    );
     const [list, setList] = useState([])
     useEffect(() => {
         fetchListPortfolio();
