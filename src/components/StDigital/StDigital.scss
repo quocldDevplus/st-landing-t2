@@ -93,34 +93,37 @@
                                 }
                             }
                         }
+                        .Stdigital-module-container {
+                            .Stdigital-module-block {
+                                padding: 50px 10px;
+                                margin-top: -60px;
+                                .Stdigital-module-3 {
+                                    .Stdigital-list-user {
+                                        padding-left: 0;
+                                        padding-right: 0;
 
-                        .Stdigital-module-block {
-                            .Stdigital-module-3 {
-                                .Stdigital-list-user {
-                                    padding-left: 0;
-                                    padding-right: 0;
+                                        .Stdigital-wrapper-list {
+                                            box-sizing: border-box;
+                                            padding-left: 15px;
+                                            padding-right: 15px;
+                                            width: 100%;
 
-                                    .Stdigital-wrapper-list {
-                                        box-sizing: border-box;
-                                        padding-left: 15px;
-                                        padding-right: 15px;
-                                        width: 100%;
-
-                                        .Stdigital-wrapper-list-user {
-                                            img {
-                                                height: auto;
-                                                max-width: 100%;
-                                            }
-
-                                            p {
-                                                text-align: center;
-
-                                                strong {
-                                                    font-weight: bold !important;
+                                            .Stdigital-wrapper-list-user {
+                                                img {
+                                                    height: auto;
+                                                    max-width: 100%;
                                                 }
-                                                @media only screen and (max-width: 767px) {
-                                                    font-size: 12px;
-                                                    line-height: 22px;
+
+                                                p {
+                                                    text-align: center;
+
+                                                    strong {
+                                                        font-weight: bold !important;
+                                                    }
+                                                    @media only screen and (max-width: 767px) {
+                                                        font-size: 12px;
+                                                        line-height: 22px;
+                                                    }
                                                 }
                                             }
                                         }
