@@ -6,12 +6,16 @@
 .fe04-container_partner {
     padding-bottom: 55px!important;
     position: relative;
-    padding-bottom: 20px;
+    padding-top: 35px;
     overflow: unset !important;
     padding-bottom: 40px;
     max-width: 1170px;
     text-align: center;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
     
     .fe04-swiper_navigation {
       position: absolute;

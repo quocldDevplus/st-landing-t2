@@ -11,7 +11,7 @@ const Partner = () => {
 
   return (
     <section className="fe04-container">
-    <div className="fe04-container_partner container">
+    <div className="fe04-container_partner">
       <Col className="fe04-container_partner_title">
         <h2>Trusted by the Clients & Partners</h2>
         <Row className="fe04-swiper_navigation">
