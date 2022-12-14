@@ -53,13 +53,13 @@ const Joinus = () => {
           </Col>
         </Col>
       </Row>
-      <Row className="fe11-container">
-        <Row className="fe11-cover--container">
-          <Col className="fe11-children--container">
-            <Row className="fe11-children--cover">
-              <Col className="fe11-children--cover__col ">
-                <Row className="fe11-vc_column-innder">
-                  <Col className="fe11-wpb-wrapper">
+      <div className="fe11-container">
+        <div className="fe11-cover--container">
+          <div className="fe11-children--container">
+            <div className="fe11-children--cover">
+              <div className="fe11-children--cover__col ">
+                <div className="fe11-vc_column-innder">
+                  <div className="fe11-wpb-wrapper">
                     <div className="fe11-title">
                       <h2></h2>
                       <h3 className="fe11-sub-heading">
@@ -100,13 +100,13 @@ const Joinus = () => {
                           })}
                       </Row>
                     </Row>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Row>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

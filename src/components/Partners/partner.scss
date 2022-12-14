@@ -4,14 +4,19 @@
   background: #3333330f;
 }
 .fe04-container_partner {
-  
+    padding-bottom: 55px!important;
     position: relative;
-    padding-bottom: 20px;
+    padding-top: 35px;
     overflow: unset !important;
     padding-bottom: 40px;
     max-width: 1170px;
     text-align: center;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    
     .fe04-swiper_navigation {
       position: absolute;
       z-index: 9999;
@@ -39,6 +44,7 @@
     }
     .fe04-container_partner_title {
       padding: 55px 0 40px 0;
+      padding-top: 90px!important;
       text-align: left;
       color: black;
       font-weight: bold;

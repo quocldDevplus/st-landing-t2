@@ -4,14 +4,17 @@ import classNames from 'classnames/bind';
 import FE02Typical from '~/components/FE02Typical/FE02Typical';
 import Partner from '~/components/Partners/partner';
 import Wedevelop from '~/components/Wedevelop/wedevelop';
-
-const cx = classNames.bind(styles);
+/* import FE02Typical from "~/components/FE02Typical/FE02Typical";
+import Partner from "~/components/Partners/partner"; */
 
 function Home() {
     return (
         <>
             <FE02Typical />
             <Wedevelop />
+            <Partner />
+            =======
+            <FE02Typical />
             <Partner />
         </>
     );
