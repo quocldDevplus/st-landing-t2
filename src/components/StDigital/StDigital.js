@@ -95,7 +95,7 @@ const StDigital = () => {
         },
     ]);
     return (
-        <Row className="Stdigital-container" style={{ margin: '0px' }}>
+        <Row className="Stdigital-container" style={{ margin: '0' }}>
             <Fe07Header
                 backgroundImageFe07={backgroundImageFe07}
                 SetBackgroundImageFe07={SetBackgroundImageFe07}
