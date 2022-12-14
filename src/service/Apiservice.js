@@ -21,7 +21,13 @@ const getAllDataStDigitalImage = () => {
 const getAllDataPartner =() =>{
     return axios.get('partner')
 }
+const getAllDataJoinUs =() =>{
+    return axios.get('join-us')
+}
+const getAllDataWedevelop =() =>{
+    return axios.get('we-develop')
+}
 export {getAllDataFE02,getAllDataFE07Div1,getAllDataFE07Div2,getAllDataPortfolio,
         getAllDataStDigitalIcon,getAllDataStDigitalImage,getAllDataPartner,
-
+        getAllDataJoinUs,getAllDataWedevelop,
 }

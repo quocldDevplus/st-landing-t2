@@ -14,11 +14,14 @@
 
     .fe02-wpb__col-context__inner__context {
       padding: 0 15px;
+      @media only screen and (max-width:541px){
+        padding: 0 50px;
+      }
 
       .fe02-wpb__col-context__inner__context__block {
         position: relative;
         overflow: hidden;
-        max-height: 100vh;
+        max-height: 100%;
         box-shadow: 0 0 1px #888888;
         a {
           height: 100%;
