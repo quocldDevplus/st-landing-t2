@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './incubation.scss';
-import FE02TypicalChild from '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
+import Stincubation from './stincubation/stincubation';
 import Fe07Header from '../FE07_STSOFTWARE/Fe07Header/Fe07Header';
 
 const Incubation = () => {
@@ -15,6 +15,11 @@ const Incubation = () => {
             teamDesigner: '#coworking space',
             teamCaptionHide:
                 'Taking advantage of the co-founder team with experience in the software development, IoT Space aims to target customers who are developers, SMEs or tech start-up.                        ',
+            linkheader: '',
+            linkfb: 'https://www.facebook.com/iotcoworkingspace',
+            linkins: '',
+            linkgg: '',
+            linktwitter: '',
         },
         {
             id: 'incu03-2',
@@ -23,22 +28,37 @@ const Incubation = () => {
             teamDesigner: '#coworking space',
             teamCaptionHide:
                 'A casual, comfortable, and convenient place to work with the benefit of cafe service and a collaborative community. Nomad space is intend to digital nomad community for working, meetup, business exchange',
+            linkheader: '',
+            linkfb: 'https://www.facebook.com/nomadspacevietnam',
+            linkins: '',
+            linkgg: '',
+            linktwitter: '',
         },
         {
-            id: 'fe02-3',
+            id: 'incu03-3',
             image: 'https://stunited.vn/wp-content/uploads/2019/09/ciaoflora-1.jpg ',
             teamCaption: 'Ciaoflora',
             teamDesigner: '#ecommerce #flower delivery',
             teamCaptionHide:
                 'As a member of Interflora worldwide (ID 292), Ciaoflora Việt Nam is leading online flower service of Vietnam - which can not only offer express flower delivery (within 2-3 hours of ordering) and same day delivery but worldwide flower delivery too.',
+            linkheader: 'https://www.dienhoatructuyen.vn/',
+            linkfb: 'https://www.facebook.com/dienhoatructuyen.vn',
+            linkins: '',
+            linkgg: '',
+            linktwitter: 'https://twitter.com/ciaoflora',
         },
         {
-            id: 'fe02-4',
+            id: 'incu03-4',
             image: 'https://stunited.vn/wp-content/uploads/2019/09/cafedat-1024x1024-1.jpg',
             teamCaption: 'Cafe Dat - ダトコーヒー',
             teamDesigner: '#coffee product',
             teamCaptionHide:
                 'Cafe Dat is aiming not only bring the best coffee experience to consumers, but also to produce the highest quality coffee.',
+            linkheader: 'http://shop.cafedat.vn/',
+            linkfb: 'https://www.facebook.com/www.cafedat.vn/',
+            linkins: '',
+            linkgg: '',
+            linktwitter: '',
         },
     ]);
     const [list, setList] = useState([
@@ -64,19 +84,15 @@ const Incubation = () => {
                 ' ST United is considering an early stage VC fund that invests in technology startups in Vietnam, particularly Danang, at their early and growth stages. We provide funding, and assistance by establishing strategic partnerships to help startups scale their businesses',
         },
     ]);
-    const [backgroundImageFe07, SetBackgroundImageFe07] = useState([
-        {
-            id: '1',
-            backGroundFe07: 'https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg',
-        },
-    ]);
-    const [bannerCaption, SetBannerCaption] = useState([
-        {
-            id: 'BnFe07',
-            h1: 'ST INCUBATION',
-            h2: "We're not a mentor, expert or coach whatsoever. We are a founder and fight together",
-        },
-    ]);
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState({
+        id: '1',
+        backGroundFe07: 'https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg',
+    });
+    const [bannerCaption, SetBannerCaption] = useState({
+        id: 'BnFe07',
+        h1: 'ST INCUBATION',
+        h2: "We're not a mentor, expert or coach whatsoever. We are a founder and fight together",
+    });
     return (
         <div className="incubation--container">
             <Row className="banner--container" style={{ margin: '0' }}>
@@ -152,7 +168,7 @@ const Incubation = () => {
                                 <h3 className="ourincubation--covertitle">We are supporting for these cool teams</h3>
                             </Row>
                             <Row className="fe02-wpb__col-container" style={{ padding: '0', margin: '0' }}>
-                                <FE02TypicalChild listContainerFe02={list2} SetListContainerFe02={setList2} />
+                                <Stincubation listStIncubation={list2} SetListStIncubation={setList2} />
                             </Row>
                         </Col>
                     </Row>
