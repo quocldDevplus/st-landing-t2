@@ -27,7 +27,13 @@ const getAllDataJoinUs =() =>{
 const getAllDataWedevelop =() =>{
     return axios.get('we-develop')
 }
+const getAllDataIncubationText =() =>{
+    return axios.get('incubation-1')
+}
+const getAllDataIncubation =() =>{
+    return axios.get('incubation')
+}
 export {getAllDataFE02,getAllDataFE07Div1,getAllDataFE07Div2,getAllDataPortfolio,
         getAllDataStDigitalIcon,getAllDataStDigitalImage,getAllDataPartner,
-        getAllDataJoinUs,getAllDataWedevelop,
+        getAllDataJoinUs,getAllDataWedevelop,getAllDataIncubationText,getAllDataIncubation
 }
