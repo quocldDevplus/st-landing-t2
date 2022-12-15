@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 
 function Header() {
     return (
-        <header id="header-section">
-            <div className="container d-lg-block d-none">
+        <header id="header-section" className={cx('header-section__box')}>
+            <div className="container d-lg-block d-none position-absolute">
                 <div className={cx('houzez-header')}>
                     <div className={cx('logo-box')}>
                         <NavLink className={cx('logo-img')} to="/">
@@ -20,28 +20,36 @@ function Header() {
                     <nav className={cx('nav-menu')}>
                         <ul className={cx('main-menu')}>
                             {menuItems.map((item) => (
-                                <li className={cx('nav-item', `${item.childrens ? 'had-children' : ''}`)} key={item.id}>
-                                    {item.childrens ? (
-                                        <NavLink className={cx('item-content')}>{item.content}</NavLink>
-                                    ) : (
-                                        <NavLink to={item.to} className={cx('item-content')}>
-                                            {item.content}
-                                        </NavLink>
-                                    )}
-                                    <ul className={cx('sub-menu')}>
+                                <>
+                                    <li
+                                        className={cx('nav-item', `${item.childrens ? 'had-children' : ''}`)}
+                                        key={item.id}
+                                    >
                                         {item.childrens ? (
-                                            item.childrens.map((itemChildren) => (
-                                                <li className={cx('sub-item')} key={itemChildren.id}>
-                                                    <NavLink to={itemChildren.to} className={cx('sub-item-content')}>
-                                                        {itemChildren.content}
-                                                    </NavLink>
-                                                </li>
-                                            ))
+                                            <NavLink className={cx('item-content')}>{item.content}</NavLink>
                                         ) : (
-                                            <></>
+                                            <NavLink to={item.to} className={cx('item-content')}>
+                                                {item.content}
+                                            </NavLink>
                                         )}
-                                    </ul>
-                                </li>
+                                        <ul className={cx('sub-menu')}>
+                                            {item.childrens ? (
+                                                item.childrens.map((itemChildren) => (
+                                                    <li className={cx('sub-item')} key={itemChildren.id}>
+                                                        <NavLink
+                                                            to={itemChildren.to}
+                                                            className={cx('sub-item-content')}
+                                                        >
+                                                            {itemChildren.content}
+                                                        </NavLink>
+                                                    </li>
+                                                ))
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </ul>
+                                    </li>
+                                </>
                             ))}
                         </ul>
                     </nav>
