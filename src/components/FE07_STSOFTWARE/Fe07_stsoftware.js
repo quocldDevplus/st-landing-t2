@@ -8,12 +8,12 @@ import {getAllDataFE02, getAllDataFE07Div1, getAllDataFE07Div2} from "~/service/
 const Fe07_stsoftware = (props) => {
     const [listContextFe07D1, setListContextFe07D1] = useState([])
     const [listContextFe07D2, setListContextFe07D2] = useState([])
-    const [listFe07,setListFe07]=useState([])
-    const [backgroundImageFe07,SetBackgroundImageFe07] = useState(
-        { id : "1",backGroundFe07:"https://drive.google.com/uc?export=view&id=17pHRhgZBj5Uq3PV723tNz0eCuglZcorD"}
+    const [listFe07, setListFe07] = useState([])
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState(
+        {id: "1", backGroundFe07: "https://drive.google.com/uc?export=view&id=17pHRhgZBj5Uq3PV723tNz0eCuglZcorD"}
     )
-    const [bannerCaption,SetBannerCaption] = useState(
-        {id:"BnFe07",h1:"ST SOFTWARE",h2:"WE OFFER A WEALTH OF SERVICES TO ADDRESS YOUR TECHNOLOGY NEEDS." },
+    const [bannerCaption, SetBannerCaption] = useState(
+        {id: "BnFe07", h1: "ST SOFTWARE", h2: "WE OFFER A WEALTH OF SERVICES TO ADDRESS YOUR TECHNOLOGY NEEDS."},
     )
     useEffect(() => {
         fetchListFE07Div1();
@@ -29,16 +29,16 @@ const Fe07_stsoftware = (props) => {
         let res = await getAllDataFE02();
         setListFe07(res);
     }
-    useEffect(()=>{
+    useEffect(() => {
         fetchListFE07Div2();
-    },[])
-    const fetchListFE07Div2 = async () =>{
+    }, [])
+    const fetchListFE07Div2 = async () => {
         let res = await getAllDataFE07Div2();
         setListContextFe07D2(res);
     }
     return (
         <>
-            <Row className="fe07-container" style={{margin:"0"}}>
+            <Row className="fe07-container" style={{margin: "0"}}>
                 <Fe07Header
                     backgroundImageFe07={backgroundImageFe07}
                     SetBackgroundImageFe07={SetBackgroundImageFe07}
@@ -47,8 +47,8 @@ const Fe07_stsoftware = (props) => {
                 />
                 <Col className="fe07-container__wpb">
                     <Row className="fe07-container__wpb__inner">
-                        <Row className="fe07-blank">
-                        </Row>
+                         <Row className="fe07-blank">
+                    </Row>
                         <Col className="fe07-context__wpb">
                             <Row className="fe07-context__wpb--block ">
                                 {listContextFe07D1 && listContextFe07D1.map((item, index) => {
@@ -62,7 +62,7 @@ const Fe07_stsoftware = (props) => {
                                                     <Col className="fe07-context__wpb--block--content">
                                                         <h3>{item.title}</h3>
                                                         <p>{item.content}</p>
-                                                        <a href="">{item.link}</a>
+                                                        <a href="#">{item.link}</a>
                                                     </Col>
                                                 </Col>
                                             </Row>
@@ -107,12 +107,12 @@ const Fe07_stsoftware = (props) => {
                                 </h3>
                             </Col>
                             <Col className="fe07-emptyspace"></Col>
-                            <Row className="fe02-wpb__col-container" style={{padding:"0",margin:"0"}}>
-                            <FE02TypicalChild
-                                key={props.key}
-                                listContainerFe02={listFe07}
-                                SetListContainerFe02={setListFe07}
-                            />
+                            <Row className="fe02-wpb__col-container" style={{padding: "0", margin: "0"}}>
+                                <FE02TypicalChild
+                                    key={props.key}
+                                    listContainerFe02={listFe07}
+                                    SetListContainerFe02={setListFe07}
+                                />
                             </Row>
                         </Col>
                         <Row className="fe07-emptyspace" style={{height: "120px"}}>
