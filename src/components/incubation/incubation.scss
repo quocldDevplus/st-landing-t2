@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,900;1,300&display=swap');
 
 .incubation--container {
     background-color: #f5f5f5;
     padding-bottom: 40px;
 
     .banner--container {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     .banner--content {
         width: 100%;
@@ -40,8 +36,8 @@
 
     .st--incubation--container {
         max-width: 1250px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 33px;
+        padding-right: 33px;
 
         .st--incubation--cover--container {
             margin: 0px;
@@ -57,21 +53,30 @@
                     min-height: 1px;
                     height: fit-content;
                     box-sizing: border-box;
+
                     .incubation--title h1 {
                         padding: 30px 0px;
                         font-size: 30px;
                         line-height: 38px;
                         font-weight: 500;
                         text-transform: none;
-
-                        @media (max-width: 481px) {
-                            font-size: 18px;
-                            line-height: 24px;
+                        @media (min-width: 768px) and (max-width: 991px) {
+                            font-size: 22px !important;
                         }
+                        @media (min-width: 768px) and (max-width: 991px) {
+                            padding: 20px 0;
+                        }
+
                         @media (max-width: 767px) {
                             font-size: 20px;
                             line-height: 28px;
                             padding: 15px 0;
+                            margin-bottom: 0px;
+                        }
+
+                        @media (max-width: 481px) {
+                            font-size: 18px;
+                            line-height: 24px;
                         }
                     }
                     .incubation--description {
@@ -87,7 +92,12 @@
                                 font-weight: 300;
                                 line-height: 24px;
                                 text-transform: none;
-                                @media (max-width: 767px) {
+                                .s1 {
+                                    .s1--strong {
+                                        font-weight: 700;
+                                    }
+                                }
+                                @media only screen and (max-width: 767px) {
                                     font-size: 12px;
                                     line-height: 22px;
                                     margin-bottom: 15px;
@@ -99,7 +109,7 @@
             }
         }
         .service--container {
-            padding: 55px 0px;
+            padding: 55px 5px;
             max-width: 1200px;
             .service--block {
                 display: flex;
@@ -131,6 +141,10 @@
                         line-height: 22px;
                         font-weight: 300;
                         margin: 0 0 10px 0;
+                        @media only screen and (max-width: 767px) {
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
                     }
                 }
             }
@@ -141,17 +155,17 @@
         }
     }
     .ourincubation--background {
-        padding-left: 31.6667px;
-        padding-right: 31.3333px;
-        margin-left: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
         padding-top: 40px !important;
         padding-bottom: 100px !important;
         background-color: #ffffff !important;
         .ourincubation--container {
-            max-width: 1170px;
+            max-width: 1290px;
             position: relative;
             padding-left: 0;
             padding-right: 0;
+
             z-index: 1;
             display: flex;
             justify-content: center;
@@ -169,6 +183,9 @@
                         padding-top: 50px;
                         text-align: center;
                         font-family: 'Roboto', sans-serif;
+                        @media only screen and (max-width: 767px) {
+                            padding: 35px 0 0 0 !important;
+                        }
                         .ourincubation--title {
                             font-size: 24px;
                             line-height: 32px;
@@ -191,17 +208,78 @@
         }
     }
 }
-@media only screen and (max-width: 481px) {
-    .banner--title h1 {
-        font-size: 20px;
-        line-height: 24px;
-        margin: 0 0 5px;
+@media only screen and (max-width: 913px) {
+    .st--incubation--container {
+        padding-right: 75px !important;
+        padding-left: 75px !important;
+    }
+    .ourincubation--cover {
+        padding-right: 60px !important;
+        padding-left: 60px !important;
     }
 }
-@media (max-width: 767px) {
-    .banner--title h1 {
-        font-size: 24px;
-        line-height: 28px;
-        margin: 0 0 5px;
+@media only screen and (max-width: 821px) {
+    .st--incubation--container {
+        padding-right: 25px !important;
+        padding-left: 25px !important;
+    }
+    .ourincubation--cover {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .st--incubation--container {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .ourincubation--cover {
+        padding-left: 66px !important;
+        padding-right: 66px !important;
+    }
+}
+@media only screen and (max-width: 541px) {
+    .fe02-wpb__col-context__inner__context {
+        padding: 0px !important;
+    }
+    .fe02-wpb__col-context__inner {
+        padding: 0px !important;
+    }
+    .ourincubation--cover {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .st--incubation--container {
+        padding-right: 45px !important;
+        padding-left: 45px !important;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    .ourincubation--cover {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .ourincubation--background {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .fe02-wpb__col-context__inner {
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
+    }
+    .st--incubation--container {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    .fe02-wpb__col-context__inner__context {
+        padding: 0 15px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .incubation--container {
+        padding-bottom: 80px;
     }
 }
