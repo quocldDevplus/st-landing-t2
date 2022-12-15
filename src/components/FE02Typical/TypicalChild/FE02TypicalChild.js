@@ -1,5 +1,4 @@
 import {FaFacebookSquare, FaLinkedin} from "react-icons/fa";
-import {Link, NavLink} from "react-router-dom";
 import './FE02TypicalChild.scss'
 import {Col, Row} from "react-bootstrap";
 
@@ -17,16 +16,18 @@ const FE02TypicalChild = (props) => {
                                     <Col className="fe02-wpb__caption--before">
                                         <Row className="fe02-wpb__caption__inner">
                                             <h4 className="fe02-wpb__caption__team--name">
-                                                <NavLink className="fe02-wpb__caption__teamCaption" to="">
+                                                <a className="fe02-wpb__caption__teamCaption" href="#">
                                                     {
                                                         item.teamCaption
                                                     }
-                                                </NavLink>
+                                                </a>
                                             </h4>
                                             <p className="fe02-wpb__caption__team-designation">
-                                                {
-                                                    item.teamDesigner
-                                                }
+                                                <a href="#">
+                                                    {
+                                                        item.teamDesigner
+                                                    }
+                                                </a>
                                             </p>
                                             <ul className="fe02-wpb__caption__team-social" style={{padding: "0 0"}}>
                                                 <li>
@@ -36,9 +37,9 @@ const FE02TypicalChild = (props) => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <Link to="" className="btn-FaLinkedin">
+                                                    <a href="#" className="btn-FaLinkedin">
                                                         <FaLinkedin style={{borderRadius: "7px"}}/>
-                                                    </Link>
+                                                    </a>
                                                 </li>
                                             </ul>
 
@@ -47,17 +48,17 @@ const FE02TypicalChild = (props) => {
                                     <Col className="fe02-wpb__caption--after" key={item.id} md={3} xs={12}>
                                         <Row className="fe02-wpb__caption__inner">
                                             <h4 className="fe02-wpb__caption__team--name">
-                                                <NavLink className="fe02-wpb__caption__teamCaption" to="/">
+                                                <a className="fe02-wpb__caption__teamCaption" href="#">
                                                     {
                                                         item.teamCaption
                                                     }
-                                                </NavLink>
+                                                </a>
                                             </h4>
-                                            <NavLink className="fe02-wpb__caption__team-designation" to="/">
+                                            <a className="fe02-wpb__caption__team-designation" href="#">
                                                 {
                                                     item.teamDesigner
                                                 }
-                                            </NavLink>
+                                            </a>
                                             <p className="fe02-wpb__caption__team-descriptions">
                                                 {
                                                     item.teamCaptionHide
@@ -71,9 +72,9 @@ const FE02TypicalChild = (props) => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <Link to="/" className="btn-FaLinkedin">
+                                                    <a href="#" className="btn-FaLinkedin">
                                                         <FaLinkedin style={{borderRadius: "7px"}}/>
-                                                    </Link>
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </Row>
