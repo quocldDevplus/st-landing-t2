@@ -2,6 +2,7 @@ import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import './stincubation.scss';
 import { Col, Row } from 'react-bootstrap';
+import { incubationItems } from '~/constant';
 
 const Stincubation = (props) => {
     return (
@@ -32,16 +33,17 @@ const Stincubation = (props) => {
                                                     className="fe02-wpb__caption__team-social"
                                                     style={{ padding: '0 0' }}
                                                 >
-                                                    <li>
-                                                        <a href={item.linkfb} className="btn-facebook">
-                                                            <FaFacebookSquare style={{ borderRadius: '7px' }} />
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="" className="btn-FaLinkedin">
-                                                            <FaLinkedin style={{ borderRadius: '7px' }} />
-                                                        </Link>
-                                                    </li>
+                                                    {incubationItems.map((incubationItem) =>
+                                                        incubationItem.id === item._id
+                                                            ? incubationItem.icons.map((icon) => (
+                                                                  <li key={icon.id}>
+                                                                      <a href={item.linkfb} className="btn-facebook">
+                                                                          <i className={icon.icon} />
+                                                                      </a>
+                                                                  </li>
+                                                              ))
+                                                            : console.log('false check'),
+                                                    )}
                                                 </ul>
                                             </Row>
                                         </Col>
@@ -65,27 +67,17 @@ const Stincubation = (props) => {
                                                     className="fe02-wpb__caption__team-social"
                                                     style={{ padding: '0 0' }}
                                                 >
-                                                    <li>
-                                                        <a target="_blank" href={item.linkfb} className="btn-facebook">
-                                                            <FaFacebookSquare style={{ borderRadius: '7px' }} />
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="" className="btn-FaLinkedin">
-                                                            <FaLinkedin style={{ borderRadius: '7px' }} />
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            target="_blank"
-                                                            href="https://twitter.com/ciaoflora"
-                                                            className="btn-twitter"
-                                                        >
-                                                            <i class="fa-brands fa-square-twitter"></i>
-                                                            <i class="fa-brands fa-square-google-plus"></i>
-                                                            <FaLinkedin style={{ borderRadius: '7px' }} />
-                                                        </a>
-                                                    </li>
+                                                    {incubationItems.map((incubationItem) =>
+                                                        incubationItem.id === item._id
+                                                            ? incubationItem.icons.map((icon) => (
+                                                                  <li key={icon.id}>
+                                                                      <a href={icon.link} className="btn-facebook">
+                                                                          <i className={icon.icon} />
+                                                                      </a>
+                                                                  </li>
+                                                              ))
+                                                            : console.log('false check'),
+                                                    )}
                                                 </ul>
                                             </Row>
                                         </Col>
