@@ -5,12 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import images from '~/assets/images';
 import './Banner.scss';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
 
 function Banner() {
-    const menu = ['Slide 1', 'Slide 2', 'Slide 3'];
     const handleOnChangeSlider = () => {
         var animationElements = document.getElementsByClassName('main-banner__loading');
         for (let i = 0; i < animationElements.length; i++) {
