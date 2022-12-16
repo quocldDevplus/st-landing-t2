@@ -4,19 +4,19 @@
   box-sizing: border-box;
   max-width: 380px;
   margin-bottom: 10px;
-  cursor: default;
+  cursor: default!important;
 
   .fe02-wpb__col-context__inner {
     overflow: auto;
     max-height: 100%;
-    padding: 20px 0;
+    padding:0!important;
     bottom: 0;
 
     .fe02-wpb__col-context__inner__context {
       padding: 0 8px!important;
       display: flex;
       justify-content:center;
-      @media (max-width:541px){
+      @media only screen and (max-width:541px){
         padding: 0 20px;
       }
 
