@@ -10,29 +10,21 @@ const Stincubation = (props) => {
             {props.listStIncubation &&
                 props.listStIncubation.map((item) => {
                     return (
-                        <Col key={item._id} className="fe02-wpb__col-context" md={3} xs={12}>
-                            <Row className="fe02-wpb__col-context__inner">
-                                <Col className="fe02-wpb__col-context__inner__context">
-                                    <Col className="fe02-wpb__col-context__inner__context__block">
-                                        <a className="fe02-block"></a>
+                        <Col key={item._id} className="wpb__col-context" md={3} xs={12}>
+                            <Row className="wpb__col-context__inner">
+                                <Col className="wpb__col-context__inner__context">
+                                    <Col className="wpb__col-context__inner__context__block">
+                                        <a className="block"></a>
                                         <img src={item.image} alt="image" />
-                                        <Col className="fe02-wpb__caption--before">
-                                            <Row className="fe02-wpb__caption__inner">
-                                                <h4 className="fe02-wpb__caption__team--name">
-                                                    <a
-                                                        className="fe02-wpb__caption__teamCaption"
-                                                        href={item.linkheader}
-                                                    >
+                                        <Col className="wpb__caption--before">
+                                            <Row className="wpb__caption__inner">
+                                                <h4 className="wpb__caption__team--name">
+                                                    <a className="wpb__caption__teamCaption" href={item.linkheader}>
                                                         {item.teamCaption}
                                                     </a>
                                                 </h4>
-                                                <p className="fe02-wpb__caption__team-designation">
-                                                    {item.teamDesigner}
-                                                </p>
-                                                <ul
-                                                    className="fe02-wpb__caption__team-social"
-                                                    style={{ padding: '0 0' }}
-                                                >
+                                                <p className="wpb__caption__team-designation">{item.teamDesigner}</p>
+                                                <ul className="wpb__caption__team-social" style={{ padding: '0 0' }}>
                                                     {incubationItems.map((incubationItem) =>
                                                         incubationItem.id === item._id
                                                             ? incubationItem.icons.map((icon) => (
@@ -47,26 +39,20 @@ const Stincubation = (props) => {
                                                 </ul>
                                             </Row>
                                         </Col>
-                                        <Col className="fe02-wpb__caption--after" key={item.id} md={3} xs={12}>
-                                            <Row className="fe02-wpb__caption__inner">
-                                                <h4 className="fe02-wpb__caption__team--name">
-                                                    <a
-                                                        className="fe02-wpb__caption__teamCaption"
-                                                        href={item.linkheader}
-                                                    >
+                                        <Col className="wpb__caption--after" key={item.id} md={3} xs={12}>
+                                            <Row className="wpb__caption__inner">
+                                                <h4 className="wpb__caption__team--name">
+                                                    <a className="wpb__caption__teamCaption" href={item.linkheader}>
                                                         {item.teamCaption}
                                                     </a>
                                                 </h4>
-                                                <NavLink className="fe02-wpb__caption__team-designation" to="">
+                                                <NavLink className="wpb__caption__team-designation" to="">
                                                     {item.teamDesigner}
                                                 </NavLink>
-                                                <p className="fe02-wpb__caption__team-descriptions">
+                                                <p className="wpb__caption__team-descriptions">
                                                     {item.teamCaptionHide}
                                                 </p>
-                                                <ul
-                                                    className="fe02-wpb__caption__team-social"
-                                                    style={{ padding: '0 0' }}
-                                                >
+                                                <ul className="wpb__caption__team-social" style={{ padding: '0 0' }}>
                                                     {incubationItems.map((incubationItem) =>
                                                         incubationItem.id === item._id
                                                             ? incubationItem.icons.map((icon) => (
