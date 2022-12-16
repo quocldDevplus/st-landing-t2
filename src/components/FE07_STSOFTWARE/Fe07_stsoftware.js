@@ -4,6 +4,7 @@ import FE02TypicalChild from "../FE02Typical/TypicalChild/FE02TypicalChild";
 import {Row, Col} from 'react-bootstrap'
 import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
 import {getAllDataFE02, getAllDataFE07Div1, getAllDataFE07Div2} from "~/service/Apiservice";
+import Container from "react-bootstrap/Container";
 
 const Fe07_stsoftware = (props) => {
     const [listContextFe07D1, setListContextFe07D1] = useState([])
@@ -45,10 +46,10 @@ const Fe07_stsoftware = (props) => {
                     bannerCaption={bannerCaption}
                     SetBannerCaption={SetBannerCaption}
                 />
-                <Col className="fe07-container__wpb">
-                    <Row className="fe07-container__wpb__inner">
-                         <Row className="fe07-blank">
-                    </Row>
+                <Row className="fe07-container__wpb">
+                    <Col className="fe07-container__wpb__inner">
+                        <Row className="fe07-blank">
+                        </Row>
                         <Col className="fe07-context__wpb">
                             <Row className="fe07-context__wpb--block ">
                                 {listContextFe07D1 && listContextFe07D1.map((item, index) => {
@@ -107,7 +108,8 @@ const Fe07_stsoftware = (props) => {
                                 </h3>
                             </Col>
                             <Col className="fe07-emptyspace"></Col>
-                            <Row className="fe02-wpb__col-container" style={{padding: "0", margin: "0"}}>
+                            <Row className="fe02-wpb__col-container"
+                                 style={{display: "flex", justifyContent: "center"}}>
                                 <FE02TypicalChild
                                     key={props.key}
                                     listContainerFe02={listFe07}
@@ -117,8 +119,8 @@ const Fe07_stsoftware = (props) => {
                         </Col>
                         <Row className="fe07-emptyspace" style={{height: "120px"}}>
                         </Row>
-                    </Row>
-                </Col>
+                    </Col>
+                </Row>
             </Row>
         </>
     )

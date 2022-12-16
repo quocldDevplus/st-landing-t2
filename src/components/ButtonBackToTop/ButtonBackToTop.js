@@ -21,17 +21,18 @@ const ButtonBackToTop = () => {
         })
     }
     return (
-        <>
-                    <button className={backToTopButton ? "btn-scroll-up" : "btn-scroll-down"}
+        <>{setBackToTopButton &&
+            <button className={backToTopButton ? "btn-scroll-up" : "btn-scroll-down"}
                     onClick={scrollUp}
-                    >
-                       <i className="fal fa-angle-up icon__scroll-up " style={{
-                           font:"normal normal normal 14px/1 FontAwesome",
-                           fontSize:"inherit",
-                           display: "flex",
-                           justifyContent:"center",
-                       }}/>
-                    </button>
+            >
+                <i className="fal fa-angle-up icon__scroll-up " style={{
+                    font: "normal normal normal 14px/1 FontAwesome",
+                    fontSize: "inherit",
+                    display: "flex",
+                    justifyContent: "center",
+                }}/>
+            </button>
+        }
         </>
     )
 }
