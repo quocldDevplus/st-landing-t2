@@ -22,7 +22,7 @@ const Fe07Header = (props) => {
             return () => {
                 window.removeEventListener('scroll', handleScroll);
             };
-        }, [window.scrollY]);
+        }, []);
     return (
         <Row className="fe07-header-wrap" style={{margin: "0", padding: "0"}}>
             <Col className="fe07-header-media">
