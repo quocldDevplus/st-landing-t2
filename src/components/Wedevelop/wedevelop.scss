@@ -151,7 +151,6 @@
         padding: 20px 0 35px !important;
     }
 }
-
 @media (max-width: 541px) {
     .wdl_container {
         padding-left: 38px;
@@ -159,9 +158,16 @@
     }
 }
 
-@media (max-width: 391px) {
+@media (max-width: 415px) {
     .wdl_container {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media (max-width: 394px) {
+    .wdl_container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }

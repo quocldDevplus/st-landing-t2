@@ -33,11 +33,7 @@ const Stincubation = (props) => {
                                                     style={{ padding: '0 0' }}
                                                 >
                                                     <li>
-                                                        <a
-                                                            target="_blank"
-                                                            href="https://www.facebook.com/stunited.vn"
-                                                            className="btn-facebook"
-                                                        >
+                                                        <a href={item.linkfb} className="btn-facebook">
                                                             <FaFacebookSquare style={{ borderRadius: '7px' }} />
                                                         </a>
                                                     </li>
@@ -75,9 +71,20 @@ const Stincubation = (props) => {
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <Link to="/" className="btn-FaLinkedin">
+                                                        <Link to="" className="btn-FaLinkedin">
                                                             <FaLinkedin style={{ borderRadius: '7px' }} />
                                                         </Link>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            target="_blank"
+                                                            href="https://twitter.com/ciaoflora"
+                                                            className="btn-twitter"
+                                                        >
+                                                            <i class="fa-brands fa-square-twitter"></i>
+                                                            <i class="fa-brands fa-square-google-plus"></i>
+                                                            <FaLinkedin style={{ borderRadius: '7px' }} />
+                                                        </a>
                                                     </li>
                                                 </ul>
                                             </Row>

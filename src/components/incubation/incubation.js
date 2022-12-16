@@ -1,11 +1,11 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './incubation.scss';
 import Stincubation from './stincubation/stincubation';
 import Fe07Header from '../FE07_STSOFTWARE/Fe07Header/Fe07Header';
-import {getAllDataIncubation, getAllDataIncubationText} from "~/service/Apiservice";
+import { getAllDataIncubation, getAllDataIncubationText } from '~/service/Apiservice';
 
 const Incubation = () => {
     const [list2, setList2] = useState([]);
@@ -13,22 +13,22 @@ const Incubation = () => {
 
     useEffect(() => {
         fetchListIncubation();
-    }, [])
+    }, []);
     const fetchListIncubation = async () => {
         let res = await getAllDataIncubation();
         setList2(res);
-    }
+    };
 
-    useEffect(()=>{
+    useEffect(() => {
         fetchListIncubationText();
-    },[])
-    const fetchListIncubationText = async () =>{
+    }, []);
+    const fetchListIncubationText = async () => {
         let res = await getAllDataIncubationText();
-        setList(res)
-    }
+        setList(res);
+    };
     const [backgroundImageFe07, SetBackgroundImageFe07] = useState({
         id: '1',
-        backGroundFe07: 'https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg',
+        backGroundFe07: 'https://drive.google.com/uc?export=view&id=1I3GbJcwLbDj0NJlnO0FgGomTEBk8erE1   ',
     });
     const [bannerCaption, SetBannerCaption] = useState({
         id: 'BnFe07',
