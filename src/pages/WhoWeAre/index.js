@@ -1,5 +1,6 @@
-function WhoWeAre() {
-    return <h2>Who We Are Page</h2>;
-}
+import WhoWeAre from '~/components/WhoWeAre/whoweare';
 
-export default WhoWeAre;
+const Pagewhoweare = () => {
+    return <WhoWeAre />;
+};
+export default Pagewhoweare;
