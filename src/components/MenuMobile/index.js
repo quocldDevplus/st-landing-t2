@@ -19,7 +19,7 @@ function MenuMobile() {
     };
 
     return (
-        <div className="mobile-header d-lg-none">
+        <div className="mobile-header d-lg-none position-relative">
             <div className="container-mobile container ">
                 <div className="row row-cols-4 menu-mobile">
                     <div className="col menu-mobile__menu-btn">

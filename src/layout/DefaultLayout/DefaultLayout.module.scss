@@ -5,9 +5,9 @@
     flex-direction: column;
 }
 .header-section {
+    box-sizing: border-box;
     width: 100%;
-    position: absolute;
-    z-index: 9999;
+    z-index: 999999999;
 }
 .body-section {
     width: 100%;
