@@ -1,28 +1,28 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
 import FE02TypicalChild from '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
-import {getAllDataPortfolio} from "~/service/Apiservice";
+import { getAllDataPortfolio } from '~/service/Apiservice';
+import Porforlio from './Porfolio.scss';
 
 const Portforlio = () => {
-    const [backgroundImageFe07, SetBackgroundImageFe07] = useState(
-        { id:'1', backGroundFe07:'https://drive.google.com/uc?export=view&id=12btms3s2HW8gMKW_F_cG6Wvrrb95-94y' },
-    );
-    const [bannerCaption, SetBannerCaption] = useState(
-        {
-            id: 'BnFe07',
-            h1: 'ST PORTFOLIO',
-            h2: 'From ideas turned into carefully crafted pixels and problems crafted into solutions.',
-        },
-    );
-    const [list, setList] = useState([])
+    const [backgroundImageFe07, SetBackgroundImageFe07] = useState({
+        id: '1',
+        backGroundFe07: 'https://drive.google.com/uc?export=view&id=12btms3s2HW8gMKW_F_cG6Wvrrb95-94y',
+    });
+    const [bannerCaption, SetBannerCaption] = useState({
+        id: 'BnFe07',
+        h1: 'ST PORTFOLIO',
+        h2: 'From ideas turned into carefully crafted pixels and problems crafted into solutions.',
+    });
+    const [list, setList] = useState([]);
     useEffect(() => {
         fetchListPortfolio();
-    }, [])
+    }, []);
     const fetchListPortfolio = async () => {
         let res = await getAllDataPortfolio();
         setList(res);
-    }
+    };
     return (
         <>
             <Row className="fe02-container" style={{ margin: '0' }}>
@@ -49,6 +49,18 @@ const Portforlio = () => {
                             >
                                 <FE02TypicalChild listContainerFe02={list} SetListContainerFe02={setList} />
                             </Row>
+                        </Row>
+                        <Row className="Portforlio-button-container">
+                            <Col className="Portforlio-button">
+                                <a
+                                    class="button btn"
+                                    href="https://storage.googleapis.com/stunited/STU%20SUCCESS%20STORIES.pdf"
+                                    title="https://storage.googleapis.com/stunited/STU%20SUCCESS%20STORIES.pdf"
+                                    target="_blank"
+                                >
+                                    Download full stories
+                                </a>
+                            </Col>
                         </Row>
                     </Row>
                 </Col>
