@@ -1,6 +1,6 @@
 import './MenuMobile.scss';
 import images from '~/assets/images';
-import { faBars, faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { menuItems } from '~/constant';
 import { NavLink } from 'react-router-dom';
@@ -24,7 +24,7 @@ function MenuMobile() {
                 <div className="row row-cols-4 menu-mobile">
                     <div className="col menu-mobile__menu-btn">
                         <button onClick={handleBtnMenuMobile}>
-                            <FontAwesomeIcon className="menu-btn__icon-mobile" icon={faBars} />
+                            <i class="fa fa-navicon menu-btn__icon-mobile"></i>
                         </button>
                     </div>
                     <div className="col-6 menu-mobile__logo-box">
@@ -37,12 +37,11 @@ function MenuMobile() {
                 <nav className="nav-menu-mobile">
                     <ul className="main-menu-mobile">
                         {menuItems.map((item) => (
-                            <>
+                            <div key={item.id}>
                                 <li
                                     className={`nav-item-mobile ${
                                         item.childrens && subMobileToggle ? 'nav-item-mobile-active' : ''
                                     } ${item.childrens && 'nav-item-mobile--had-children'}`}
-                                    key={item.id}
                                 >
                                     {item.childrens ? (
                                         <button className="nav-item-mobile-active-btn" onClick={handleBtnSubMenuMobile}>
@@ -76,7 +75,7 @@ function MenuMobile() {
                                         )}
                                     </ul>
                                 )}
-                            </>
+                            </div>
                         ))}
                     </ul>
                 </nav>

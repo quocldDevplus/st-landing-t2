@@ -31,8 +31,11 @@
 
 .menu-btn__icon-mobile {
     color: #ffff;
-    height: 22px;
     cursor: pointer;
+    &::before {
+        font-size: 22px;
+        content: '\f0c9';
+    }
 }
 
 .nav-menu-mobile {
@@ -81,6 +84,7 @@
     position: absolute;
     right: 22px;
     height: 14px;
+    color: #004274;
 }
 .item-content {
     color: #004274;

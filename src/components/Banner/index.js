@@ -22,18 +22,20 @@ function Banner() {
     return (
         <>
             <Swiper
+                speed={2000}
+                spaceBetween={30}
                 onSlideChange={handleOnChangeSlider}
                 modules={[EffectFade, Navigation, Pagination, Autoplay]}
-                spaceBetween={30}
                 effect={'fade'}
                 autoplay={{ delay: 10000, disableOnInteraction: false }}
                 navigation={true}
+                loop={true}
                 pagination={{
                     el: '.swiper-pagination',
                     clickable: true,
                     renderBullet: function (index) {
                         return (
-                            '<span class="swiper-pagination-bullet"><span class="render-bullet-inside"></span><span class="tp-bullet"> <img class="tp-bullet-image" src=' +
+                            '<span class="swiper-pagination-bullet"><span class="render-bullet-inside"></span><span class="tp-bullet"><span class="tp-bullet-hover-area"></span> <img class="tp-bullet-image" src=' +
                             bannerItems[index].img +
                             ' alt="banner2" /> <span class="tp-bullet-title">Slide</span></span></span>'
                         );
