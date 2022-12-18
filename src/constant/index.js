@@ -4,7 +4,7 @@ export const menuItems = [
     {
         id: 2,
         content: 'What we do',
-
+        to: '/st-software',
         childrens: [
             { id: 1, content: 'St Software', to: '/st-software' },
             { id: 2, content: 'St Digital', to: '/st-digital' },

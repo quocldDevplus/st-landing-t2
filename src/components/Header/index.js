@@ -20,13 +20,12 @@ function Header() {
                     <nav className={cx('nav-menu')}>
                         <ul className={cx('main-menu')}>
                             {menuItems.map((item) => (
-                                <>
-                                    <li
-                                        className={cx('nav-item', `${item.childrens ? 'had-children' : ''}`)}
-                                        key={item.id}
-                                    >
+                                <div key={item.id}>
+                                    <li className={cx('nav-item', `${item.childrens ? 'had-children' : ''}`)}>
                                         {item.childrens ? (
-                                            <NavLink className={cx('item-content')}>{item.content}</NavLink>
+                                            <NavLink to={item.to} className={cx('item-content')}>
+                                                {item.content}
+                                            </NavLink>
                                         ) : (
                                             <NavLink to={item.to} className={cx('item-content')}>
                                                 {item.content}
@@ -49,7 +48,7 @@ function Header() {
                                             )}
                                         </ul>
                                     </li>
-                                </>
+                                </div>
                             ))}
                         </ul>
                     </nav>
