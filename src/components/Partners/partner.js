@@ -80,9 +80,9 @@ const Partner = () => {
                         }}
                         className="mySwiper"
                     >
-                        {list.map((item) => {
+                        {list.map((item, index) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
                                     <div className="partner-item">
                                         <a href={item.link}>
                                             {' '}

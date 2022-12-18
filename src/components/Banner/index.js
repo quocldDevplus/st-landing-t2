@@ -13,7 +13,6 @@ function Banner() {
         var animationElements = document.getElementsByClassName('main-banner__loading');
         for (let i = 0; i < animationElements.length; i++) {
             animationElements[i].classList.remove('main-banner__loading-animation');
-            console.log(bannerItems);
             void animationElements[i].offsetWidth;
             animationElements[i].classList.add('main-banner__loading-animation');
         }

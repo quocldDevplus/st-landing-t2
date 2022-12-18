@@ -24,7 +24,7 @@ function MenuMobile() {
                 <div className="row row-cols-4 menu-mobile">
                     <div className="col menu-mobile__menu-btn">
                         <button onClick={handleBtnMenuMobile}>
-                            <i class="fa fa-navicon menu-btn__icon-mobile"></i>
+                            <i className="fa fa-navicon menu-btn__icon-mobile"></i>
                         </button>
                     </div>
                     <div className="col-6 menu-mobile__logo-box">
