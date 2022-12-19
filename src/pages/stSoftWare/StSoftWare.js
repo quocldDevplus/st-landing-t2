@@ -1,4 +1,4 @@
-import Fe07_stsoftware from "~/components/FE07_STSOFTWARE/Fe07_stsoftware";
+import Fe07_stsoftware from "~/components/STSOFTWARE/Fe07_stsoftware";
 
 function stSoftWare() {
     return (

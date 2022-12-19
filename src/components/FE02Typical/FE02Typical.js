@@ -1,8 +1,7 @@
 import './FE02Typical.scss'
 import {useEffect, useState} from "react";
-import {getAllDataFE02} from "../../service/Apiservice"
+import {getAllDataFE02} from "~/service/Apiservice"
 import FE02TypicalChild from "./TypicalChild/FE02TypicalChild";
-import axios from "axios";
 import {Col, Row} from "react-bootstrap";
 
 const FE02Typical = () => {

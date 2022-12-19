@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { BiChevronRight } from 'react-icons/bi';
-import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
+import Fe07Header from '~/components/STSOFTWARE/Fe07Header/Fe07Header';
 
 const LetsTalk = () => {
     const [backgroundImageFe07, SetBackgroundImageFe07] = useState([

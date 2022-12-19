@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Row , Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./wedevelop.scss";
-import {getAllDataStDigitalIcon, getAllDataWedevelop} from "~/service/Apiservice";
+import {getAllDataWedevelop} from "~/service/Apiservice";
 
 const Wedevelop = () => {
     const [list,setList] = useState([])

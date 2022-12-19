@@ -2,7 +2,7 @@ import './StDigital.scss';
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
-import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
+import Fe07Header from '~/components/STSOFTWARE/Fe07Header/Fe07Header';
 import { getAllDataPortfolio, getAllDataStDigitalIcon, getAllDataStDigitalImage } from '~/service/Apiservice';
 
 const StDigital = () => {

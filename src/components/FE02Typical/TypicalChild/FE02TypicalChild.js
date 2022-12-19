@@ -12,7 +12,7 @@ const FE02TypicalChild = (props) => {
                         <Row className="fe02-wpb__col-context__inner">
                             <Col className="fe02-wpb__col-context__inner__context">
                                 <Col className="fe02-wpb__col-context__inner__context__block">
-                                    <a className="fe02-block"></a>
+                                    <a className="fe02-block" href="#"></a>
                                     <img src={item.image} alt="image"/>
                                     <Col className="fe02-wpb__caption--before">
                                         <Row className="fe02-wpb__caption__inner">

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Fe07Header from '~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header';
+import Fe07Header from '~/components/STSOFTWARE/Fe07Header/Fe07Header';
 import FE02TypicalChild from '~/components/FE02Typical/TypicalChild/FE02TypicalChild';
 import {getAllDataPortfolio} from "~/service/Apiservice";
 
@@ -44,7 +44,7 @@ const Portforlio = () => {
                             </Col>
                             <div className="fe02-emptyspace"></div>
                             <Row
-                                className="fe02-wpb__col-container"
+                                className="wpb__col-container"
                                 style={{ padding: '0', margin: '0', justifyContent: 'left' }}
                             >
                                 <FE02TypicalChild listContainerFe02={list} SetListContainerFe02={setList} />

@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './incubation.scss';
 import Stincubation from './stincubation/stincubation';
-import Fe07Header from '../FE07_STSOFTWARE/Fe07Header/Fe07Header';
+import Fe07Header from '../STSOFTWARE/Fe07Header/Fe07Header';
 import {getAllDataIncubation, getAllDataIncubationText} from "~/service/Apiservice";
 
 const Incubation = () => {

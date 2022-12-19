@@ -2,9 +2,8 @@ import './Fe07_stsoftware.scss'
 import {useEffect, useState} from "react";
 import FE02TypicalChild from "../FE02Typical/TypicalChild/FE02TypicalChild";
 import {Row, Col} from 'react-bootstrap'
-import Fe07Header from "~/components/FE07_STSOFTWARE/Fe07Header/Fe07Header";
+import Fe07Header from "~/components/STSOFTWARE/Fe07Header/Fe07Header";
 import {getAllDataFE02, getAllDataFE07Div1, getAllDataFE07Div2} from "~/service/Apiservice";
-import Container from "react-bootstrap/Container";
 
 const Fe07_stsoftware = (props) => {
     const [listContextFe07D1, setListContextFe07D1] = useState([])
@@ -38,7 +37,7 @@ const Fe07_stsoftware = (props) => {
         setListContextFe07D2(res);
     }
     return (
-        <>
+            <body>
             <Row className="fe07-container" style={{margin: "0"}}>
                 <Fe07Header
                     backgroundImageFe07={backgroundImageFe07}
@@ -122,7 +121,7 @@ const Fe07_stsoftware = (props) => {
                     </Col>
                 </Row>
             </Row>
-        </>
+            </body>
     )
 }
 export default Fe07_stsoftware;
