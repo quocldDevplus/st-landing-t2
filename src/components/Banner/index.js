@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import './Banner.scss';
+import { animations } from 'react-animation';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
 
 function Banner() {
@@ -13,7 +14,6 @@ function Banner() {
         var animationElements = document.getElementsByClassName('main-banner__loading');
         for (let i = 0; i < animationElements.length; i++) {
             animationElements[i].classList.remove('main-banner__loading-animation');
-            console.log(bannerItems);
             void animationElements[i].offsetWidth;
             animationElements[i].classList.add('main-banner__loading-animation');
         }
@@ -49,9 +49,11 @@ function Banner() {
                             <img className="main-banner__img" src={item.img} alt="banner1" />
                         </div>
                         <div className="main-banner__layer"></div>
+
                         <div className="main-banner__item-content-box">
                             <p className="main-banner__item-content">{item.content}</p>
                         </div>
+
                         <span className="main-banner__loading main-banner__loading-animation"></span>
                     </SwiperSlide>
                 ))}

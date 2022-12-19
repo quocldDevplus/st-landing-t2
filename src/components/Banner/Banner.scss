@@ -55,7 +55,7 @@
 }
 
 .main-banner__item-content-box {
-    padding: 5px 20px;
+    padding: 4px 18px;
     z-index: 99999999;
     background-color: rgb(247, 148, 29);
     position: absolute;
@@ -66,11 +66,25 @@
     border-radius: 3px;
     transform: translateX(-50%);
     top: 70vh;
+    animation: slide-up 1s ease 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-up {
+    0% {
+        visibility: hidden;
+        top: calc(56% + 10vw);
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        top: calc(53% + 10vw);
+        opacity: 1;
+    }
 }
 
 .main-banner__item-content {
-    font-size: 24px;
-    line-height: 50px;
+    font-size: 1.25vw;
+    line-height: 2.7vw;
     letter-spacing: 2px !important;
     font-family: 'Cabin';
     color: white;
@@ -80,7 +94,7 @@
     padding: 0;
 }
 
-@media (max-height: 600px) {
+/* @media (max-height: 600px) {
     .main-banner__item-content-box {
         padding: 0.81vh 3.25vh;
     }
@@ -97,7 +111,7 @@
         font-size: 1.85vw;
         line-height: 3.9vw;
     }
-}
+} */
 
 .main-banner__loading {
     height: 5px;

@@ -9,11 +9,11 @@
     display: flex;
 }
 .logo-box {
-    width: 150px;
     display: flex;
 
     .logo-img {
         img {
+            width: 140px !important ;
             position: relative;
             width: 100%;
             top: -4px;
