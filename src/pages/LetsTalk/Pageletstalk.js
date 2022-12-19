@@ -1,4 +1,4 @@
-import LetsTalk from '~/components/LetsTalk/letstalk';
+import LetsTalk from '~/components/LetsTalk';
 
 const Pageletstalks = () => {
     return <LetsTalk />;

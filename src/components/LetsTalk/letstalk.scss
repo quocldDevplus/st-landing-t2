@@ -9,19 +9,10 @@ ol.breadcrumb {
     padding-bottom: 20px;
     height: fit-content;
 }
-svg {
-    color: #9b9b9b;
-    font-size: 14.29px;
-    display: flex;
-    transform: translateY(5px);
-}
 li.breadcrumb-item {
     font-weight: 400;
     font-size: 12px;
     height: fit-content;
-    color: #00aeef;
-}
-a {
     color: #00aeef;
 }
 li.breadcrumb-item.active {
@@ -30,6 +21,30 @@ li.breadcrumb-item.active {
     color: #707070;
     height: fit-content;
 }
+
+.letstalk-breadcrumb__unactive {
+    a {
+        color: #00aeef !important;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+.letstalk-breadcrumb__active {
+    transform: translateY(6px);
+    color: #707070;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    font-weight: 300 !important;
+}
+
+svg.breadcrumb-icon {
+    height: 14px;
+    color: #9b9b9b;
+    transform: translateY(5px);
+    /* padding: 0 5px; */
+    /* font-size: 22px; */
+}
+
 .letstalk-container {
     font-family: 'Roboto';
     background-color: #f5f5f5;
@@ -130,49 +145,11 @@ li.breadcrumb-item.active {
         outline: none;
     }
 }
-@media (min-width: 1200px) {
-    .letstalk-container-block {
-        width: 1170px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
-@media only sreen and (min-width: 992px) {
-    .letstalk-container-block {
-        width: 970px;
-    }
-}
-@media only sreen and (min-width: 768px) {
-    .letstalk-container-block {
-        width: 750px;
-    }
-}
-@media only sreen and (min-width: 540px) {
-    .letstalk-container-block {
-        max-width: 40px;
-    }
-}
-@media only sreen and (max-width: 767px) {
-    .letstalk-white-block {
-        padding: 25px !important;
-    }
-}
 .letstalk-column-text {
     margin-bottom: 35px;
 }
 .letstalk-column-inner {
     padding: 0 15px;
-}
-p {
-    margin: 0px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-strong {
-    font-weight: 700;
-}
-h4 {
-    margin-bottom: 20px;
 }
 .guest-email {
     margin: 0px;
@@ -214,4 +191,39 @@ h4 {
     width: 16px;
     height: 16px;
     border: none;
+}
+.letstalk-form__input-validate-error {
+    color: #f00;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+}
+
+.submit-form__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        color: #959595;
+    }
+}
+.submit-form__result-fail {
+    padding: 10px 20px;
+    margin: 32px 8px 16px 8px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #d8000c;
+    background-color: #ffbaba;
+    border: 0;
+    padding: 10px 20px;
+}
+.submit-form__result-success {
+    padding: 10px 20px;
+    margin: 32px 8px 16px 8px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #063014;
+    background-color: #b6e6be;
+    border: 0;
+    padding: 10px 20px;
 }
