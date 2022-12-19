@@ -64,7 +64,7 @@ const getAllDataDescription2 =() => {
     return axios.get('who-we-are-d2')
 }
 const getAllDataWhoWeAreUser =() => {
-    return axios.get('who-we-are-users')
+    return axios.get('who-we-are-user')
 }
 
 //----------------------------------------------------//
